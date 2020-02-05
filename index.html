@@ -25,8 +25,8 @@
           <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <div>
-            <button type="button" style="background-color: darkblue;"><img src="img/icon-login.svg" width="20" height="17" alt="">Войти</button> 
-            <button type="button">Регистрация</button>
+            <a href="login.html" style="background-color: darkblue;"><img src="img/icon-login.svg" width="20" height="17" alt="">Войти</a> 
+            <a href="#">Регистрация</a>
         </div>
       </div>  
       <nav>
@@ -44,45 +44,45 @@
 
     <main>
 
-      <h1>Интернет-магазин "Техномарт"</h1>
+      <h1 class="visually-hidden">Интернет-магазин "Техномарт"</h1>
 
       <section>
-        <h2>Интерактивная навигация</h2>
+        <h2 class="visually-hidden">Интерактивная навигация</h2>
           <ul>
             <li>
+              <h3>Материалы </h3>
               <a href="#">
-                <h3>Материалы </h3>
                 <span>на любой вкус</span>
-                <img src="img/icon-material.svg" width="44" height="65" alt="">
-              </a>
+              </a>  
+              <img src="img/icon-material.svg" width="44" height="65" alt="">
             </li>
             <li>
+              <h3>Инструмент </h3>
               <a href="#">
-                <h3>Инструмент </h3>
                 <span>НА ВСЕ СЛУЧАИ</span>
-                <img src="img/icon-insrument.svg" width="75" height="61" alt="">
               </a>
+              <img src="img/icon-insrument.svg" width="75" height="61" alt="">
             </li>
             <li>
+              <h3>Техника </h3>
               <a href="#">
-                <h3>Техника </h3>
                 <span>для стройки</span>
-                <img src="img/icon-technics.svg" width="78" height="62" alt="">
               </a>
+              <img src="img/icon-technics.svg" width="78" height="62" alt="">
             </li>
             <li>
+              <h3>Скидки 50%</h3>
               <a href="#">
-                <h3>Скидки 50%</h3>
                 <span>На 350 ТОВАРОВ</span>
-                <img src="img/icon-sales.svg" width="59" height="72" alt="">
               </a>
+              <img src="img/icon-sales.svg" width="59" height="72" alt="">
             </li>
             <li>
+              <h3>Доставка</h3>
               <a href="#">
-                <h3>Доставка</h3>
                 <span>бесплатно</span>
-                <img src="img/icon-delivery.svg" width="78" height="63" alt="">
               </a>
+              <img src="img/icon-delivery.svg" width="78" height="63" alt="">
             </li>
           </ul>
           <div>
@@ -247,6 +247,34 @@
           <img src="img/map.png" width="300" height="158" alt="Карта проезда">
         </a>
         <button type="button">Заблудились? Напишите нам!</button>
+      </section>
+
+      <section>
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <p>
+          <img src="img/big-map.jpg" width="970" height="476" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        </p>
+        <button type="button"><img src="img/form-2.svg" width="21" height="21" alt="#">Закрыть</button>
+      </section>
+
+      <section>
+        <h2 class="visually-hidden">Заблудились? Напишите нам!</h2>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <P>
+            <label for="appointment-name">Ваше имя:</label>
+            <input id="appointment-name" type="text" name="name" value="" placeholder="Имя Фамилия"> 
+          </P>
+          <P>
+            <label for="appointment-email">Ваш e-mail:</label>
+            <input id="appointment-email" type="email" name="email" value="" placeholder="email@example.com">
+          </P>
+          <P>
+            <label for="appointment-text">Текст письма:</label>
+            <textarea id="appointment-text" rows="5" name="text" placeholder="В свободной форме"></textarea>
+          </P>
+          <button type="submit">Отправить</button>
+        </form>
+        <button type="button"><img src="img/form-2.svg" width="21" height="21" alt="#">закрыть</button>
       </section>
       
     </main> 

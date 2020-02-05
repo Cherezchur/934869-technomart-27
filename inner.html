@@ -25,7 +25,7 @@
             <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
           <div>
-              <button type="button"><img src="img/icon-user.svg" width="21" height="18" alt="">Равшан Джамшутович<img src="img/icon-login.svg" width="21" height="18" alt=""></button> 
+              <a href="#"><img src="img/icon-user.svg" width="21" height="18" alt="">Равшан Джамшутович<img src="img/icon-login.svg" width="21" height="18" alt=""></a> 
               <a href="#">мои заказы</a>
               <a href="#">личный кабинет</a>
           </div>
@@ -57,33 +57,55 @@
         <section>
           <h2>Товар добавлен в корзину!</h2>
           <img src="img/form-1.svg" width="66" height="66" alt="">
-          <img src="img/form-2.svg" width="21" height="21" alt="">
           <a href="">Оформить заказ</a>
           <button type="button">Продолжить покупки</button>
+          <button type="button"><img src="img/form-2.svg" width="21" height="21" alt="">закрыть</button>
         </section>
 
         <section>
-            <h2>Фильтр:</h2>
+          <h2>Фильтр:</h2>
+          <form method="get" action="https://echo.htmlacademy.ru">
+            <fieldset>
+              <legend>Производители:</legend>
+                <ul>
+                  <li>
+                    <input type="checkbox" name="bosch" id="filter-bosch">
+                    <label for="filter-bosch">BOSCH</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="interskol" id="filter-interskol">
+                    <label for="filter-interskol">ИНТЕРСКОЛ</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="makita" id="filter-makita">
+                    <label for="filter-makita">MAKITA</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="dewalt" id="filter-dewalt">
+                    <label for="filter-dewalt">DEWALT</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="dewalt" id="filter-hitachi">
+                    <label for="filter-hitachi">HITACHI</label>
+                  </li>
+                </ul>
+            </fieldset>
+            <fieldset> 
+              <legend>Питание</legend>
+                <ul>
+                  <li>
+                    <input type="radio" name="power-group" value="rechargeable" id="filter-rechargeble">
+                    <label for="filter-rechargeble">Аккумуляторное</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="power-group" value="networking" id="filter-networking">
+                    <label for="filter-networking">Сетевое</label>
+                  </li>
+                </ul>
+            </fieldset>
+            <button type="submit">показать</button>
+          </form>  
         </section>
-        <section>
-            <h2>Производители</h2>
-            <ul>
-                <li><img src="img/checkbox-on.svg" width="26" height="23" alt="">BOSCH</li>
-                <li><img src="img/checkbox-off.svg" width="23" height="23" alt="">ИНТЕРСКОЛ</li>
-                <li><img src="img/checkbox-on.svg" width="26" height="23" alt="">MAKITA</li>
-                <li><img src="img/checkbox-off.svg" width="23" height="23" alt="">DEWALT</li>
-                <li><img src="img/checkbox-off.svg" width="23" height="23" alt="">HITACHI</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Питание</h2>
-            <ul>
-                <li><img src="img/radio-on.svg" width="25" height="25" alt="">Аккумуляторное</li>
-                <li><img src="img/radio-off.svg" width="25" height="25" alt="">Сетевое</li>
-            </ul>
-        </section>
-
-        <button type="button">показать</button>
         
         <section>
             <h2>Сортировка:</h2>
@@ -97,7 +119,7 @@
         </section>
 
         <section>
-            <h2>Список товаров</h2>
+            <h2 class="visually-hidden">Список товаров</h2>
             <ul>
                 <li>
                     <a href="catalog-item.html">
@@ -203,6 +225,20 @@
                         <button type="button">В закладки</button>
                     </div>
                 </li>
+            </ul>
+            <ul>
+              <li>
+                1
+              </li>
+              <li>
+                <a href="#">2</a>
+              </li>
+              <li>
+                <a href="#">3</a>
+              </li>
+              <li>
+                <button type="button">следующая</button>
+              </li>
             </ul>
         </section>
 
