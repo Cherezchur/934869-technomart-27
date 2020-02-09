@@ -3,7 +3,7 @@ body {
     padding: 0;
   
     font-family: 'Cuprum', sans-serif;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 400;
     color: #ffffff;
     
@@ -15,25 +15,35 @@ a {
     color: #ffffff;
 }
 
-.main-navigation {
-    background-color: #293449;
-}
-
-.main-navigation-list{
-    list-style: none;
-}
-
-.main-navigation-list a:hover,
-.main-navigation-list a:focus {
-    background-color: #212a3a;
-}
-
-.main-header-logo a{
+.button {
+    font-size: 14px;
     background-color: #ee3643;
 }
 
-.main-header-logo a:hover,
-.main-header-logo a:focus {
+.button:hover,
+.button:focus {
+    background-color: #ca2c37;
+}
+
+.list-item {
+    list-style: none;
+}
+
+.header-navigation-list {
+    background-color: #293449;
+}
+
+.header-navigation-list a:hover,
+.header-navigation-list a:focus {
+    background-color: #212a3a;
+}
+
+.logo a{
+    background-color: #ee3643;
+}
+
+.logo a:hover,
+.logo a:focus {
     background-color: #ca2c37;
 }
 
@@ -76,6 +86,7 @@ a {
 .user-navigation a {
     font-size: 21;
     color: #000000;
+    background-color: #ffffff;
 }
 
 .user-navigation a:hover,
@@ -83,18 +94,68 @@ a {
     color: #ee3643;
 }
 
-.list-item {
-    list-style: none;
-}
-
-.list-item a{
+.main-navigation-list a {
     background-color: #32425c;
 }
 
-.list-item a:hover,
-.list-item a:focus {
+.main-navigation-list a:hover,
+.main-navigation-list a:focus {
     background-color: #293449;
 }
 
+.index-columns {
+    color: black;
+    font-size: 13px;
+}
 
+.index-columns h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+}
 
+.list-carriers {
+    font-size: 18px;
+} 
+
+.form-button {
+    color: #ffffff;
+    border: none;
+}
+
+.footer-navigation-pane {
+    background-color: #32425c;
+    font-size: 18px;
+}
+
+.navigation-service-list a,
+.footer-navigation-product p{
+    color: #f3f7f9;
+}
+
+.navigation-product-list a,
+.footer-copyright a {
+    color: #ffda96;
+}
+
+.navigation-service-list a:hover,
+.navigation-service-list a:focus,
+.navigation-product-list a:hover,
+.navigation-product-list a:focus,
+.footer-copyright a:hover,
+.footer-copyright a:focus {
+    text-decoration: underline;
+}
+
+.footer-contacts {
+    background-color: #293449;
+    font-size: 16px;
+}
+
+.social-list a {
+    background-color: #212a3a;
+}
+
+.social-list a:hover,
+.social-list a:focus {
+    background-color: #ee3643;
+}
