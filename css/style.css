@@ -47,6 +47,10 @@ a {
     background-color: #ca2c37;
 }
 
+.shopping-cart a {
+    background-color: #ee3643;
+}
+
 .place-order a {
     background-color: #63a63e;
 }
@@ -83,14 +87,27 @@ a {
     color: #32425c;
 }
 
-.user-navigation a {
-    font-size: 21;
+.user-navigation a,
+.user-button a {
+    font-size: 21px;
+    font-weight: bold;
     color: #000000;
     background-color: #ffffff;
 }
 
 .user-navigation a:hover,
 .user-navigation a:focus {
+    color: #ee3643;
+}
+
+.user-capabilities a { 
+    font-size: 16px;
+    text-decoration: underline;
+    color: black;
+}
+
+.user-capabilities a:hover,
+.user-capabilities a:focus {
     color: #ee3643;
 }
 
@@ -121,6 +138,52 @@ a {
     color: #ffffff;
     border: none;
 }
+
+.catalog-title-section {
+    font-size: 30px;
+    text-transform: uppercase;
+    color:#32425c;
+    background-color: #f2f6f8;
+}
+
+.breadcrumbs a {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: black;
+}
+
+.filter fieldset {
+    border: none;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #000000;
+  }
+
+.filter legend {
+    font-size: 21px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.filter ul {
+    list-style: none;
+    line-height: 40px;
+}
+
+.filter-input:disabled + label {
+    color: #000000;
+
+    opacity: 0.5;
+  }
+
+.filter button {
+    background-color: white;
+    border: 2px solid #eaeaea;
+}
+
+.filter
 
 .footer-navigation-pane {
     background-color: #32425c;
