@@ -172,10 +172,19 @@ a {
     line-height: 40px;
 }
 
+.filter input {
+    opacity: 0.5;
+}
+
+.filter input:hover,
+.filter input:focus {
+    opacity: 0.7;
+}
+
 .filter-input:disabled + label {
     color: #000000;
 
-    opacity: 0.5;
+    opacity: 0.3;
   }
 
 .filter button {
@@ -183,7 +192,63 @@ a {
     border: 2px solid #eaeaea;
 }
 
-.filter
+.catalog-list li {
+    border: 2px solid #eaeaea;
+}
+
+.catalog-list li:hover,
+.catalog-list li:focus {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.catalog-item h3,
+.catalog-item span,
+.catalog-item div {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+}
+
+.catalog-item h3 {
+    color: black;
+}
+
+.button-buy {
+    color: white;
+    background-color: #63a63e;
+    border: none;
+    border-bottom: 2px solid #367315;
+}
+
+.button-buy:hover,
+.button-buy:focus {
+    background-color: #5fbb2d;
+}
+
+.button-bookmark {
+    color: #32425c;
+    border: 2px solid #63a63e;
+}
+
+.button-bookmark:hover,
+.button-bookmark:focus {
+    border-color: #32425c;
+}
+
+.old-price {
+    color: black;
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.new-price {
+    color: white;
+    background-color: #ee3643;
+}
+
+.name-model {
+    text-transform: uppercase;
+}
+
 
 .footer-navigation-pane {
     background-color: #32425c;
@@ -221,4 +286,19 @@ a {
 .social-list a:hover,
 .social-list a:focus {
     background-color: #ee3643;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    …
+  }
+
+.big-map,
+.user-form,
+.cart-form {
+    display: none;
 }
