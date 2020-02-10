@@ -33,11 +33,6 @@ a {
     background-color: #293449;
 }
 
-.header-navigation-list a:hover,
-.header-navigation-list a:focus {
-    background-color: #212a3a;
-}
-
 .logo a{
     background-color: #ee3643;
 }
@@ -47,7 +42,37 @@ a {
     background-color: #ca2c37;
 }
 
-.shopping-cart a {
+.logo a:active {
+    background-color: #ba2732;
+}
+
+.bookmark a:hover,
+.bookmark a:focus,
+.cart a:hover,
+.cart a:focus,
+.search a:hover,
+.search a:focus {
+    background-color: #212a3a;
+}
+
+.search a:active {
+    background-color: white;
+    color: black;
+    content: "Перфоратор";
+}
+
+.search a:active {
+    background-color: white;
+    content: "Перфоратор";
+}
+
+.bookmark a:active,
+.cart a:active {
+    background-color: #161d29;
+    opacity: 0.5;
+}
+
+.header-catalog-cart {
     background-color: #ee3643;
 }
 
@@ -58,6 +83,11 @@ a {
 .place-order a:hover,
 .place-order a:focus {
     background-color: #5fbb2d;
+}
+
+.place-order a:active {
+    background-color: #518534;
+    opacity: 0.5;
 }
 
 .container {
@@ -100,6 +130,11 @@ a {
     color: #ee3643;
 }
 
+.user-navigation a:active {
+    color: black;
+    opacity: 0.5;
+}
+
 .user-capabilities a { 
     font-size: 16px;
     text-decoration: underline;
@@ -113,11 +148,18 @@ a {
 
 .main-navigation-list a {
     background-color: #32425c;
+    border-bottom: 2px solid #2b374d;
 }
 
 .main-navigation-list a:hover,
 .main-navigation-list a:focus {
     background-color: #293449;
+}
+
+.main-navigation-list a:active {
+    color: #a9a9a9;
+    border: none;
+    background-color: #1d2739;
 }
 
 .index-columns {
