@@ -18,11 +18,17 @@ a {
 .button {
     font-size: 14px;
     background-color: #ee3643;
+    border: none;
+    color: white;
 }
 
 .button:hover,
 .button:focus {
     background-color: #ca2c37;
+}
+
+.button:active {
+    background-color: #ba2732;
 }
 
 .list-item {
@@ -58,12 +64,6 @@ a {
 .search a:active {
     background-color: white;
     color: black;
-    content: "Перфоратор";
-}
-
-.search a:active {
-    background-color: white;
-    content: "Перфоратор";
 }
 
 .bookmark a:active,
@@ -90,7 +90,7 @@ a {
     opacity: 0.5;
 }
 
-.container {
+.average-header-container {
     background-color: #f3f7f9;
 }
 
@@ -138,12 +138,21 @@ a {
 .user-capabilities a { 
     font-size: 16px;
     text-decoration: underline;
-    color: black;
+    color: #32425c;
 }
 
 .user-capabilities a:hover,
 .user-capabilities a:focus {
     color: #ee3643;
+}
+
+.user-button a:active {
+    opacity: 0.5;
+}
+
+.user-capabilities a:active {
+    color: #32425c;
+    opacity: 0.5;
 }
 
 .main-navigation-list a {
@@ -162,18 +171,142 @@ a {
     background-color: #1d2739;
 }
 
+.interactive-section-button {
+    text-transform: uppercase;
+}
+
+.interactive-section-material,
+.interactive-section-delivery {
+    background-color: #ffbf47;
+}
+
+.interactive-section-instrument {
+    background-color: #3bbce3;
+}
+
+.interactive-section-tehnics {
+    background-color: #dc91d8;
+}
+
+.interactive-section-sales {
+    background-color: #8ed78f;
+}
+
+.interactive-list a {
+    background-color: rgba(1,1,1,0.1);
+}
+
+.interactive-list a:hover,
+.interactive-list a:focus {
+    background-color: rgba(1,1,1,0.2);
+}
+
+.interactive-list a:active {
+    background-color: rgba(1,1,1,0.3)
+}
+
+.inner-page-perforator {
+    background-color: #ccbba7;
+    background-image: url("img/slaider-perforator.jpg");
+    background-repeat: no-repeat;
+  }
+
+.inner-page-drel {
+    background-color: #584e44;
+    background-image: url("img/slaider-drel.jpg");
+    background-repeat: no-repeat;
+  }
+
+.inner-page-perforator h3,
+.inner-page-drel h3 {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.inner-page-perforator p,
+.inner-page-drel p {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.content-title-section {
+    font-size: 30px;
+    text-transform: uppercase;
+    color:#32425c;
+    background-color: #f9f5f0;
+}
+
+.list-popular-brands li {
+    border: 2px solid #eaeaea;
+}
+
+.list-popular-brands li:hover,
+.list-popular-brands li:focus {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.list-popular-brands li:active {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    opacity: 0.5;
+}
+
+.main-service-section {
+    background-color: #f4f8f9;
+}
+
+.support-title {
+    font-size: 30px;
+    color: black;
+    text-transform: uppercase;
+}
+
+.main-service-section p {
+    font-size: 13px;
+    font-family: 'PT Sans', sans-serif;
+    color: black;
+}
+
+.service-list button {
+    font-weight: bold;
+
+    background-color: #32425c;
+    color: white;
+
+    border: none;
+    box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
+}
+
+.service-list button:hover,
+.service-list button:focus {
+    background-color: #293449;
+}
+
+.service-list button:active {
+    background-color: white;
+    color: #32425c;
+}
+
+.service-description h3 {
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #32425c;
+}
+
 .index-columns {
     color: black;
     font-size: 13px;
 }
 
-.index-columns h2 {
-    font-size: 30px;
-    text-transform: uppercase;
+.company-description p,
+.main-contacts p {
+    font-family: 'PT Sans', sans-serif;
 }
 
 .list-carriers {
     font-size: 18px;
+    font-weight: bold;
+    line-height: 2;
 } 
 
 .form-button {
@@ -188,10 +321,23 @@ a {
     background-color: #f2f6f8;
 }
 
-.breadcrumbs a {
+.catalog-filter,
+.catalog-sort {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+}
+
+.breadcrumbs a,
+.catalog-filter h2,
+.catalog-sort h2 {
     font-size: 14px;
     text-transform: uppercase;
     color: black;
+}
+
+.catalog-filter h2,
+.catalog-sort h2 {
+    background-color: #f7f3ec;
 }
 
 .filter fieldset {
@@ -234,6 +380,43 @@ a {
     border: 2px solid #eaeaea;
 }
 
+.list-sort a {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: rgba(1,1,1,0.5);
+    border-bottom: 1px dotted #ee3643;
+}
+
+.list-sort a:hover,
+.list-sort a:focus {
+    color: black;
+    border-bottom: 1px solid #ee3643;
+}
+
+.list-sort a:active {
+    color: #ee3643;
+}
+
+.catalog-button {
+    font-family: 'PT Sans', sans-serif;
+    color: black;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.catalog-button:hover,
+.catalog-button:focus {
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.catalog-button:active {
+    border: 2px solid rgba(238,54,67,1);
+}
+
+.selected-button {
+    background-color: #ee3643;
+    border: none:
+}
+
 .catalog-list li {
     border: 2px solid #eaeaea;
 }
@@ -266,6 +449,11 @@ a {
     background-color: #5fbb2d;
 }
 
+.button-buy:active {
+    background-color: #518534;
+    border: none;
+}
+
 .button-bookmark {
     color: #32425c;
     border: 2px solid #63a63e;
@@ -274,6 +462,10 @@ a {
 .button-bookmark:hover,
 .button-bookmark:focus {
     border-color: #32425c;
+}
+
+.button-bookmark:active {
+    opacity: 0.5;
 }
 
 .old-price {
@@ -336,7 +528,6 @@ a {
     width: 1px;
     height: 1px;
     margin: -1px;
-    …
   }
 
 .big-map,
