@@ -52,13 +52,13 @@
 
             <nav>
               <ul class="list-item main-navigation-list">
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Компания</a></li>
-                <li><a href="inner.html">Каталог</a></li>
-                <li><a href="#">Новости</a></li>
-                <li><a href="#">Спецпредложения</a></li>
-                <li><a href="#">Доставка</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li class="menu-item"><a href="#">Главная</a></li>
+                <li class="menu-item"><a href="#">Компания</a></li>
+                <li class="menu-item"><a href="inner.html">Каталог</a></li>
+                <li class="menu-item"><a href="#">Новости</a></li>
+                <li class="menu-item"><a href="#">Спецпредложения</a></li>
+                <li class="menu-item"><a href="#">Доставка</a></li>
+                <li class="menu-item"><a href="#">Контакты</a></li>
               </ul>
             </nav>
           </div>
@@ -69,9 +69,9 @@
 
       <h1 class="visually-hidden">Интернет-магазин "Техномарт"</h1>
 
-      <section class="interactive-navigation">
+      <section class="interactive-navigation container">
         <h2 class="visually-hidden">Интерактивная навигация</h2>
-          <ul class="list-item interactive-list">
+          <ul class="list-item interactive-list interactive-list-products">
             <li class="interactive-section-material">
               <h3 class="title-interactive-section">Материалы</h3>
               <a href="#">
@@ -93,46 +93,55 @@
               </a>
               <img src="img/icon-technics.svg" width="78" height="62" alt="">
             </li>
-            <li class="interactive-section-sales">
-              <h3 class="title-interactive-section">Скидки 50%</h3>
-              <a href="#">
-                <span class="interactive-section-button">На 350 ТОВАРОВ</span>
-              </a>
-              <img src="img/icon-sales.svg" width="59" height="72" alt="">
-            </li>
-            <li class="interactive-section-delivery">
-              <h3 class="title-interactive-section">Доставка</h3>
-              <a href="#">
-                <span class="interactive-section-button">бесплатно</span>
-              </a>
-              <img src="img/icon-delivery.svg" width="78" height="63" alt="">
-            </li>
           </ul>
-          <div class="interactive-section-slaider">
-            <div class="inner-page-perforator">
-              <h3>Перфораторы</h3>
-              <p>Настоящие мужские игрушки</p>
-              <img class="visually-hidden" src="img/slaider-perforators.jpg" width="620" height="266" alt="Рабочий сверлит стену электрическим перфоратором бош">
+
+          <div class="interactive-section-container">
+            <div class="interactive-section-slaider">
+              <div class="visually-hidden inner-page-perforator">
+                <h3>Перфораторы</h3>
+                <p>Настоящие мужские игрушки</p>
+                <img class="visually-hidden" src="img/slaider-perforators.jpg" width="620" height="266" alt="Рабочий сверлит стену электрическим перфоратором бош">
+                <button class="slaider-switch slaider-switch-left" type="button"><img src="img/icon-left.svg" width="22" height="40" alt=""></button>
+                <button class="slaider-switch slaider-switch-right" type="button"><img src="img/icon-right.svg" width="22" height="40" alt=""></button>
+                <a class="button" href="inner.html">Открыть каталог</a>
+              </div>
+              <div class="inner-page-drel">
+                <h3>Дрели</h3>
+                <p>Соседям на радость!</p>
+                <img class="visually-hidden" src="img/catalog.jpg" width="620" height="266" alt="Рабочий сверлит стену аккумуляторной дрелью бош">
+                <button class="slaider-switch slaider-switch-left" type="button"><img src="img/icon-left.svg" width="22" height="40" alt=""></button>
+                <button class="slaider-switch slaider-switch-right" type="button"><img src="img/icon-right.svg" width="22" height="40" alt=""></button>
+                <a class="button" href="inner.html">Открыть каталог</a>
+              </div>
             </div>
-            <div class="inner-page-drel">
-              <h3>Дрели</h3>
-              <p>Соседям на радость!</p>
-              <img class="visually-hidden" src="img/catalog.jpg" width="620" height="266" alt="Рабочий сверлит стену аккумуляторной дрелью бош">
-            </div>
-            <button class="slaider-switch" type="button"><img src="img/icon-left.svg" width="22" height="40" alt=""></button>
-            <button class="slaider-switch" type="button"><img src="img/icon-right.svg" width="22" height="40" alt=""></button>
-            <a class="button" href="inner.html">Открыть каталог</a>
+
+            <ul class="list-item interactive-list interactive-list-service">
+              <li class="interactive-section-sales">
+                <h3 class="title-interactive-section">Скидки 50%</h3>
+                <a href="#">
+                  <span class="interactive-section-button">На 350 ТОВАРОВ</span>
+                </a>
+                <img src="img/icon-sales.svg" width="59" height="72" alt="">
+              </li>
+              <li class="interactive-section-delivery">
+                <h3 class="title-interactive-section">Доставка</h3>
+                <a href="#">
+                  <span class="interactive-section-button">бесплатно</span>
+                </a>
+                <img src="img/icon-delivery.svg" width="78" height="63" alt="">
+              </li>
+            </ul>
           </div>
       </section>
 
-      <section class="popular-product">
+      <section class="popular-product container">
 
         <div class="content-title-section">
           <h2>Популярные товары:</h2>
           <button class="button" type="button">Все популярные товары</button>
         </div>
 
-        <ul class="list-item catalog-list">
+        <ul class="list-item list-popular-product">
           <li class="catalog-item">
             <a href="catalog-item.html">
                 <img src="img/perforator-bosch-bfg-9000.jpg" width="218" height="170" alt="электрический перфоратор в сине-серебрянном корпусе с длинным сверлом-буром и черной рукояткой">
@@ -140,42 +149,42 @@
                 <span class="old-price">32500 Р.</span>
                 <span class="new-price">25500 Р.</span>
             </a>
-            <div>
+            <div class="visually-hidden">
               <button class="button-buy" type="button"><img src="img/cart-icon.svg" width="15" height="15" alt="">Купить</button>
               <button class="button-bookmark" type="button">В закладки</button>
             </div>
           </li>
-          <li>
+          <li class="catalog-item">
             <a href="catalog-item.html">
                 <img src="img/perforator-bosch-bfg-3000.jpg" width="218" height="170" alt="аккумуляторный перфоратор в черно-синем корпусе с небольшим сверлом и черной рукояткой">
                 <h3>Перфоратор <span class="name-model">BOSCH BFG 3000</span></h3>
                 <span class="old-price">22500 Р.</span>
                 <span class="new-price">15500 Р.</span>
             </a>
-            <div>
+            <div class="visually-hidden">
               <button class="button-buy" type="button"><img src="img/cart-icon.svg" width="15" height="15" alt="">Купить</button>
               <button class="button-bookmark" type="button">В закладки</button>
             </div>
           </li>
-          <li>
+          <li class="catalog-item">
             <a href="catalog-item.html">
               <img src="img/perforator-bosch-bfg-6000.jpg" width="218" height="170" alt="аккумуляторный перфоратор в черно-синем корпусе со сверлом средней длины, метчиком и черной рукояткой">
               <h3>Перфоратор <span class="name-model">BOSCH BFG 6000</span></h3>
               <span class="old-price">30500 Р.</span>
               <span class="new-price">25500 Р.</span>
             </a>
-            <div>
+            <div class="visually-hidden">
               <button class="button-buy" type="button"><img src="img/cart-icon.svg" width="15" height="15" alt="">Купить</button>
               <button class="button-bookmark" type="button">В закладки</button>
             </div>
           </li>
-          <li>
+          <li class="catalog-item">
             <a href="catalog-item.html">
               <img src="img/perforator-bosch-bfg-2000.jpg" width="218" height="170" alt="аккумуляторный перфоратор в черно-синем корпусе с небольшим сверлом и черной рукояткой">
               <h3>Перфоратор <span class="name-model">BOSCH BFG 2000</span></h3>
               <span class="new-price">12500 Р.</span>
             </a>
-            <div>
+            <div class="visually-hidden">
               <button class="button-buy" type="button"><img src="img/cart-icon.svg" width="15" height="15" alt="">Купить</button>
               <button class="button-bookmark" type="button">В закладки</button>
             </div>
@@ -183,7 +192,7 @@
         </ul>
       </section>
 
-      <section class="popular-brands">
+      <section class="popular-brands container">
 
         <div class="content-title-section">
           <h2>Популярные производители:</h2>
@@ -219,51 +228,67 @@
       </section>
       
       <section class="main-service-section">
-        <h2 class="support-title">Сервисы</h2>
-        <p>Хороший интернет-магазин отличается от плохого не только низкими ценами! 
-          Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-        <ul class="list-item service-list">
-          <li>
-            <button type="button">Доставка</button>
-          </li>
-          <li>
-            <button type="button">Гарантия</button>
-          </li>
-          <li>
-            <button type="button">Кредит</button>
-          </li>
-        </ul>
-        <div class="service-description">
-          <h3>Доставка</h3>
-          <p>Мы с удовольствием доставим ваш товар прямо 
-            к вашему подъезду совершенно бесплатно!
-            Ведь мы неплохо заработаем, 
-            поднимая его на ваш этаж!</p>
-          <img src="img/service-delivery.png" width="468" height="261" alt="">
-        </div>
-        <div class="service-description">
-          <h3>Гарантия</h3>
-          <p>Если купленный у нас товар поломается или заискрит, 
-            а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. 
-            Дом уж восстановите как-нибудь сами.</p>
-          <img src="img/service-garant.png" width="389" height="283" alt="">
-        </div>
-        <div class="service-description">
-          <h3>Кредит</h3>
-          <p>Залезть в долговую яму стало проще! 
-            Кредитные консультанты придут вам на помощь.</p>
-          <a href="#">Отправить заявку</a>
-          <img src="img/service-credit.png" width="465" height="285" alt="">
+        <div class="container">
+          <article class="support-title">
+            <h2>Сервисы</h2>
+            <p>Хороший интернет-магазин отличается от плохого не только низкими ценами! 
+              Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+          </article>
+          <div class="service-list-container">
+            <ul class="list-item service-list">
+              <li>
+                <button type="button">Доставка</button>
+              </li>
+              <li>
+                <button type="button">Гарантия</button>
+              </li>
+              <li>
+                <button type="button">Кредит</button>
+              </li>
+            </ul>
+            <div class="service-description-section">
+              <div class="service-description-item">
+                <article class="service-description delivery-service">
+                  <h3>Доставка</h3>
+                  <p>Мы с удовольствием доставим ваш товар прямо 
+                    к вашему подъезду совершенно бесплатно!
+                    Ведь мы неплохо заработаем, 
+                    поднимая его на ваш этаж!</p>
+                </article >
+                <img src="img/service-delivery.png" width="468" height="261" alt="">
+              </div>
+              <div class="service-description-item">
+                <article  class="service-description guarantee-service">
+                  <h3>Гарантия</h3>
+                  <p>Если купленный у нас товар поломается или заискрит, 
+                    а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. 
+                    Дом уж восстановите как-нибудь сами.</p>
+                </article >
+                <img src="img/service-garant.png" width="389" height="283" alt="">
+              </div>
+              <div class="service-description-item">
+                <article  class="service-description credit-service">
+                  <h3>Кредит</h3>
+                  <p>Залезть в долговую яму стало проще! 
+                    Кредитные консультанты придут вам на помощь.</p>
+                  <a href="#">Отправить заявку</a>
+                </article >
+                <img src="img/service-credit.png" width="465" height="285" alt="">
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <div class="index-columns container">
         <section class="company-description">
-          <h2 class="support-title">Компания "Техномарт"</h2>
-          <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и
-          строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
-          Техномарт работает со многими транспортными компаниями:</p>
+          <article class="support-title">
+            <h2>Компания "Техномарт"</h2>
+            <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и
+            строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
+            <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
+            Техномарт работает со многими транспортными компаниями:</p>
+          </article>
           <ul class="list-carriers">
             <li>Деловые линии</li>
             <li>Автотрейдинг</li>
@@ -273,8 +298,10 @@
         </section>
 
         <section class="main-contacts">
-          <h2 class="support-title">Контакты</h2>
-          <p>Вы можете забрать товар сами,<br> заехав в наш офис:</p>
+          <article class="support-title">
+            <h2>Контакты</h2>
+            <p>Вы можете забрать товар сами,<br> заехав в наш офис:</p>
+          </article>
           <div class="road-map">
             <a href="#">
               <img src="img/map.png" width="300" height="158" alt="Карта проезда">
