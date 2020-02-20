@@ -177,15 +177,45 @@ a {
     flex-direction: column;
 }
 
-.user-button-container a {
-    color: black;
-    font-weight: bold;
-    font-size: 21px;
-    max-width: 300px;
+.user-name-button {
+    width: 300px;
+    height: 45px;
     background-color: white;
 }
 
+.user-name-button a {
+    color: black;
+    font-weight: bold;
+    font-size: 21px;
+}
+
 .user-button-container a:active {
+    opacity: 0.5;
+}
+
+.user-capabilities {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+
+.user-capabilities a { 
+    font-size: 16px;
+    text-decoration: underline;
+    color: #32425c;
+}
+
+.user-capabilities a:hover,
+.user-capabilities a:focus {
+    color: #ee3643;
+}
+
+.user-button a:active {
+    opacity: 0.5;
+}
+
+.user-capabilities a:active {
+    color: #32425c;
     opacity: 0.5;
 }
 
@@ -237,26 +267,6 @@ a {
 
 .user-navigation a:active {
     color: black;
-    opacity: 0.5;
-}
-
-.user-capabilities a { 
-    font-size: 16px;
-    text-decoration: underline;
-    color: #32425c;
-}
-
-.user-capabilities a:hover,
-.user-capabilities a:focus {
-    color: #ee3643;
-}
-
-.user-button a:active {
-    opacity: 0.5;
-}
-
-.user-capabilities a:active {
-    color: #32425c;
     opacity: 0.5;
 }
 
@@ -502,6 +512,8 @@ a {
     padding: 0;
     border: none;
     background: transparent;
+    color: white;
+    font-size: 21px;
 }
 
 .service-list li{
@@ -509,7 +521,6 @@ a {
     width: 240px;
     height: 61px;
     background-color: #32425c;
-    color: white;
 
     border: none;
     box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
@@ -522,7 +533,6 @@ a {
 
 .service-list li:active {
     background-color: white;
-    color: #32425c;
 }
 
 .service-description-section {
@@ -563,16 +573,36 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
     max-height: 368px;
-    background-color: wheat;
+}
+
+.company-description-title,
+.main-contacts-title {
+    font-size: 25px;
+    color: black;
+    text-transform: uppercase;
+    margin: 0px;
+    padding: 0px;
 }
 
 .company-description p {
     width: 550px;
 }
 
-.company-description .support-title {
-    margin-bottom: 0px;
+.company-description ul {
+    margin-top: -10px;
+}
+
+.company-description a {
+    min-height: 38px;
+    width: 220px;
+}
+
+.contacts-form-button {
+    min-height: 38px;
+    width: 300px;
 }
 
 .main-contacts .support-title {
@@ -597,8 +627,16 @@ a {
     border: none;
 }
 
+.catalag-title-container {
+    display: flex;
+    flex-direction: column;
+}
+
 .breadcrumbs {
-    height: 59px;
+    display: flex;
+    align-items: center;
+    min-height: 59px;
+    margin-bottom: -25px;
 }
 
 .catalog-title-section {
@@ -705,6 +743,14 @@ a {
     border: 2px solid #eaeaea;
 }
 
+.list-sort {
+    display: flex;
+    justify-content: space-between;
+    width: 354px;
+    align-items: center;
+    margin-right: 46px;
+}
+
 .list-sort a {
     font-size: 14px;
     text-transform: uppercase;
@@ -720,6 +766,21 @@ a {
 
 .list-sort a:active {
     color: #ee3643;
+}
+
+.list-catalog-button {
+    display: flex;
+    justify-content: space-between;
+    width: 284px;
+}
+
+.list-catalog-button li {
+    width: 34px;
+    height: 34px;
+}
+
+.list-catalog-button li:last-child {
+    width: 140px;
 }
 
 .catalog-button {
@@ -739,7 +800,7 @@ a {
 
 .selected-button {
     background-color: #ee3643;
-    border: none;
+    border: 2px solid rgba(238,54,67,1);
 }
 
 .catalog {
@@ -858,19 +919,22 @@ a {
     font-size: 18px;
 }
 
+.footer-navigation-service {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
 .footer-navigation-product {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 53px;
 }
 
 .footer-adres {
     max-width: 323px;
 }
 
-.footer-navigation-service {
-    display: flex;
-    justify-content: space-between;
-}
 
 .footer-logo {
     background-color: #ee3643;
@@ -886,13 +950,22 @@ a {
     margin-right: 15px;
 }
 
-.footer-copyright div {
-    max-width: 135px;
+.navigation-service-list {
+    display: flex;
+    justify-content: space-between;
+    width: 547px;
+    align-items: flex-end;
 }
 
 .navigation-service-list a,
 .footer-navigation-product p{
     color: #f3f7f9;
+}
+
+.navigation-product-list {
+    display: flex;
+    justify-content: space-between;
+    width: 524px;
 }
 
 .navigation-product-list a,
@@ -914,6 +987,12 @@ a {
     font-size: 16px;
 }
 
+.social-list {
+    display: flex;
+    justify-content: space-around;
+    width: 131px;
+}
+
 .social-list a {
     background-color: #212a3a;
 }
@@ -921,6 +1000,12 @@ a {
 .social-list a:hover,
 .social-list a:focus {
     background-color: #ee3643;
+}
+
+.footer-copyright {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
 }
 
 .visually-hidden {
