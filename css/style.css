@@ -37,6 +37,12 @@ a {
     padding: 0;
 }
 
+.container {
+    width: 940px;
+    margin: 0 auto;
+    /*background-color: rgba(0, 0, 0, 0.1);*/
+}
+
 /*--------------header--------------------------------------------------------------------------------*/
 
 .main-header {
@@ -46,7 +52,8 @@ a {
 
 .header-navigation {
     display: flex;
-    width: 100%;
+    max-height: 42px;
+
     background-color: #293449;
 }
 
@@ -54,14 +61,24 @@ a {
     display: flex;
 }
 
-.header-navigation-list li {
-    max-height: 42px;
+.header-navigation-list a {
+    display: block;
+    padding-top: 12px;
+    padding-bottom: 11px;
+    vertical-align: middle;
 }
 
-.header-logo {
-    background-color: #ee3643;
+.logo {
     width: 220px;
+
+    background-color: #ee3643;
     border-bottom: 5px solid #8f1f27;
+}
+
+.header-logo img{
+    margin-bottom: 11px;
+    margin-left: 55px;
+    margin-left: 56px;
 }
 
 .logo:hover,
@@ -73,14 +90,68 @@ a {
     background-color: #ba2732;
 }
 
-.search {
-    width: 270px;
-}
-
 .bookmark,
 .cart,
 .place-order {
+    position: relative;
     width: 150px;
+
+    text-align: center;
+}
+
+.header-navigation-list .search {
+    position: relative;
+    width: 221px;
+
+    padding-left: 49px;
+}
+
+.search svg {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    left: 17px;
+    
+    opacity: 0.5;
+}
+
+.bookmark::before {
+    content: "";
+
+    width: 14px;
+    height: 16px;
+
+    position: absolute;
+    left: 14px;
+
+    background-image: url(img/icon-bookmark.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.5;
+}
+
+.bookmark:hover::before {
+    opacity: 1;
+}
+
+.cart::before {
+    content: "";
+
+    width: 15px;
+    height: 15px;
+
+    position: absolute;
+    left: 14px;
+
+    background-image: url(img/cart-icon.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.5;
+}
+
+.cart:hover::before {
+    opacity: 1;
 }
 
 .bookmark:hover,
@@ -90,6 +161,18 @@ a {
 .search:hover,
 .search:focus {
     background-color: #212a3a;
+}
+
+.goods-cart {
+    background-color: #ee3643;
+}
+
+.search:hover svg{
+    opacity: 1;
+}
+
+.search:active path {
+    fill: #ee3643;
 }
 
 .search:active {
@@ -129,12 +212,6 @@ a {
 .place-order:active {
     background-color: #518534;
     opacity: 0.5;
-}
-
-.container {
-    width: 940px;
-    margin: 0 auto;
-    /*background-color: rgba(0, 0, 0, 0.1);*/
 }
 
 .average-header-container {
