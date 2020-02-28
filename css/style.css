@@ -3,7 +3,7 @@ body {
     padding: 0;
 
     font-family: 'Cuprum', sans-serif;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 400;
     color: #ffffff;
 
@@ -93,16 +93,23 @@ a {
 .cart,
 .place-order {
     position: relative;
-    width: 150px;
+}
 
-    text-align: center;
+.bookmark {
+    width: 106px;
+    padding-left: 44px;
+}
+
+.cart {
+    width: 101px;
+    padding-left: 49px;
 }
 
 .header-navigation-list .search {
     position: relative;
     width: 221px;
 
-    padding-left: 49px;
+    padding-left: 48px;
 }
 
 .search svg {
@@ -122,7 +129,7 @@ a {
     height: 16px;
 
     position: absolute;
-    left: 14px;
+    left: 17px;
 
     background-image: url(img/icon-bookmark.svg);
     background-repeat: no-repeat;
@@ -141,7 +148,7 @@ a {
     height: 15px;
 
     position: absolute;
-    left: 14px;
+    left: 18px;
 
     background-image: url(img/cart-icon.svg);
     background-repeat: no-repeat;
@@ -200,6 +207,9 @@ a {
 }
 
 .place-order {
+    width: 150px;
+    text-align: center;
+
     background-color: #63a63e;
 }
 
@@ -225,7 +235,7 @@ a {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    margin-left: 53px;
+    margin-left: 52px;
     margin-bottom: 44px;
     margin-top: 46px;
 }
@@ -245,6 +255,10 @@ a {
     font-style: italic;
     line-height: 23px;
     color: #ee3643;
+}
+
+.header-contacts {
+    padding-left: 20px;
 }
 
 .button-phone {
@@ -278,7 +292,7 @@ a {
 
 .header-adres {
     display: block;
-    width: 264px;
+    width: 270px;
     margin: 0;
 
     text-align: center;
@@ -292,30 +306,48 @@ a {
 .user-navigation {
     display: flex;
     width: 280px;
-
     justify-content: space-between;
+
+    padding-left: 19px;
 }
 
 .user-button {
     display: block;
-    height: 25px;
-    padding: 0px;
+    min-height: 25px;
 
     padding: 10px 0;
 
     font-size: 21px;
-    font-weight: bold;
     color: #000000;
 
     background-color: #ffffff;
 }
 
-.user-navigation li:first-child{
-    width: 121px;
+.enter {
+    position: relative;
+    width: 73px;
+    padding-left: 46px;
 }
 
-.user-navigation li:last-child{
+.enter::before {
+    content: "";
+    width: 20px;
+    height: 17px;
+
+    position: absolute;
+    left: 14px;
+    top: 14px;
+
+    background-image: url(img/icon-login.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    opacity: 0.5;
+}
+
+.registration{
     width: 150px;
+    text-align: center;
 }
 
 .user-navigation a:hover,
@@ -323,7 +355,8 @@ a {
     color: #ee3643;
 }
 
-.user-navigation a:active {
+.user-navigation a:active,
+.user-name-button:active {
     color: black;
     opacity: 0.5;
 }
@@ -333,25 +366,75 @@ a {
 }
 
 .user-name-button {
-    width: 300px;
-    height: 45px;
-    background-color: white;
+    position: relative;
+
+    width: 253px;
+    padding-left: 47px;
 }
 
-.user-name-button a {
-    color: black;
-    font-weight: bold;
-    font-size: 21px;
-}
+.user-name-button::before {
+    content: "";
 
-.user-button-container a:active {
+    width: 20px;
+    height: 18px;
+
+    position: absolute;
+    top: 13px;
+    left: 13px;
+
+    background-image: url(img/icon-user.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
     opacity: 0.5;
+}
+
+.user-name-button::after {
+    content: "";
+
+    width: 20px;
+    height: 17px;
+
+    position: absolute;
+    top: 14px;
+    right: 10px;
+
+    background-image: url(img/icon-logout.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    opacity: 0.5;
+}
+
+.enter:hover::before,
+.user-name-button:hover::before,
+.user-name-button:hover::after {
+    opacity: 1;
 }
 
 .user-capabilities {
     display: flex;
-    margin: 0px;
-    padding: 0px;
+    margin-top: 5px;
+    margin-left: 18px;
+}
+
+.orders-link {
+    position: relative;
+    margin-right: 31px;
+}
+
+.orders-link::after {
+    content: "";
+
+    position: absolute;
+    top: 8px;
+    right: -18px;
+
+    width: 4px;
+    height: 4px;
+
+    background-color: #32425c;
+    border-radius: 50%;
 }
 
 .user-capabilities a {
@@ -365,10 +448,6 @@ a {
     color: #ee3643;
 }
 
-.user-button a:active {
-    opacity: 0.5;
-}
-
 .user-capabilities a:active {
     color: #32425c;
     opacity: 0.5;
@@ -376,13 +455,22 @@ a {
 
 .main-navigation-list {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    padding: 0;
+    margin: 0;
+
     justify-content: space-around;
-    margin-bottom: 60px;
 }
 
 .menu-item {
     flex: auto;
-    min-height: 60px;
+    text-align: center;
+
+    padding: 20px 0;
+    margin-bottom: 60px;
+
     background-color: #32425c;
     border-bottom: 5px solid #2b374d;
 }
