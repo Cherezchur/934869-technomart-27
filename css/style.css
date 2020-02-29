@@ -17,9 +17,14 @@ a {
 
 .button {
     font-size: 14px;
+    color: white;
+
+    text-align: center;
+    text-transform: uppercase;
+
     background-color: #ee3643;
     border: none;
-    color: white;
+    border-radius: 3px;
 }
 
 .button:hover,
@@ -455,21 +460,16 @@ a {
 
 .main-navigation-list {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    max-width: 100%;
+    margin-bottom: 60px;
 
-    padding: 0;
-    margin: 0;
-
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-.menu-item {
-    flex: auto;
-    text-align: center;
-
-    padding: 20px 0;
-    margin-bottom: 60px;
+.main-navigation-list a {
+    display: block;
+    padding: 20px 33px; 
 
     background-color: #32425c;
     border-bottom: 5px solid #2b374d;
@@ -480,13 +480,14 @@ a {
     background-color: #293449;
 }
 
-.menu-item:active {
+.menu-item a:active {
     color: #a9a9a9;
     border: none;
     background-color: #1d2739;
+    opacity: 0.5;
 }
 
-/*----------------main-----------------------------------------------------------------------------*/
+/*----------------main---interactive-navigation---------------------------------------------------------------------*/
 
 .interactive-navigation {
     margin-top: 59px;
@@ -498,9 +499,35 @@ a {
     justify-content: space-between;
 }
 
-.interactive-list-products li {
-    min-width: 300px;
-    min-height: 123px;
+.interactive-section {
+    width: 300px;
+    height: 123px;
+}
+
+.title-interactive-section {
+    display: block;
+    margin-bottom: 14px;
+    margin-left: 23px;
+
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.interactive-section-button {
+    display: block;
+    width: 135;
+    height: 25px;
+
+    padding-left: 24px;
+    padding-top: 13px;
+    margin-left: 25px;
+    margin-right: 140px;
+
+    text-transform: uppercase;
+    font-size: 14px;
+
+    border-radius: 3px;
 }
 
 .interactive-section-container {
@@ -508,6 +535,99 @@ a {
     margin-top: 20px;
     justify-content: space-between;
 }
+
+/*--------slader---------------------------------*/
+.slaider-menu {
+    position: relative;
+    overflow: hidden;
+    width: 620px;
+}
+
+.slaider-button {
+    position: absolute;
+    outline: none;
+}
+
+.slaider-switch {
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+.slaider-switch:hover {
+    cursor: pointer;
+}
+
+.slaider-switch-left {
+    top: 114px;
+    left: 25px;
+}
+
+.slaider-switch-right {
+    top: 114px;
+    right: 25px;
+}
+
+.slaider-menu a {
+    top: 206px;
+    left: 25px;
+
+    width: 195px;
+    height: 27px;
+
+    padding-top: 11px;
+}
+
+.slaider-slaiders {
+    width: 200%;
+}
+
+.slaider-slaiders .slaider-inner {
+    float: left;
+    width: 620px;
+    height: 266px;
+}
+
+.slaider-inner {
+    position: relative;
+}
+
+.slaider-inner .slaider-description {
+    position: absolute;
+    left: 24px;
+}
+
+.slaider-description h3 {
+    display: block;
+    margin: 0;
+    margin-top: 20px;
+
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.slaider-description p {
+    display: block;
+    margin: 0;
+
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.slaider-drel img {
+    background-color: #584e44;
+    width: 620px;
+    height: 266px;
+}
+
+.slaider-perforator img {
+    background-color: #ccbba7;
+    width: 620px;
+    height: 266px;
+}
+
+/*----------end-of-slaider------------*/
 
 .interactive-list-service {
     display: flex;
@@ -520,25 +640,100 @@ a {
     height: 123px;
 }
 
-.interactive-section-button {
-    text-transform: uppercase;
-}
-
 .interactive-section-material,
 .interactive-section-delivery {
+    position: relative;
     background-color: #ffbf47;
 }
 
 .interactive-section-instrument {
+    position: relative;
     background-color: #3bbce3;
 }
 
 .interactive-section-tehnics {
+    position: relative;
     background-color: #dc91d8;
 }
 
 .interactive-section-sales {
+    position: relative;
     background-color: #8ed78f;
+}
+
+.interactive-section-material::before {
+    content: "";
+    
+    position: absolute;
+    width: 44px;
+    height: 65px;
+
+    left: 213px;
+    top: 31px;
+
+    background-image: url(img/icon-material.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.interactive-section-instrument::before {
+    content: "";
+    
+    position: absolute;
+    width: 75px;
+    height: 61px;
+
+    left: 197px;
+    top: 33px;
+
+    background-image: url(img/icon-insrument.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.interactive-section-tehnics::before {
+    content: "";
+    
+    position: absolute;
+    width: 78px;
+    height: 62px;
+
+    left: 191px;
+    top: 31px;
+
+    background-image: url(img/icon-technics.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.interactive-section-sales::before {
+    content: "";
+    
+    position: absolute;
+    width: 59px;
+    height: 72px;
+
+    left: 196px;
+    top: 26px;
+
+    background-image: url(img/icon-sales.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.interactive-section-delivery::before {
+    content: "";
+    
+    position: absolute;
+    width: 78px;
+    height: 63px;
+
+    left: 191px;
+    top: 32px;
+
+    background-image: url(img/icon-delivery.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
 .interactive-list a {
@@ -562,63 +757,29 @@ a {
     background-color: teal;
 }
 
-.inner-page-perforator {
-    background-color: #ccbba7;
-    background-image: url("img/slaider-perforator.jpg");
-    background-repeat: no-repeat;
-    width: 620px;
-    height: 266px;
-}
-
-.inner-page-drel {
-    background-color: #584e44;
-    background-image: url("img/slaider-drel.jpg");
-    background-repeat: no-repeat;
-    width: 620px;
-    height: 266px;
-}
-
-.slaider-switch {
-    position: absolute;
-    padding: 0;
-    border: none;
-    background: transparent;
-}
-
-.slaider-switch-left {
-    left: 25px;
-}
-
-.slaider-switch-right {
-    right: 25px;
-}
-
-.inner-page-perforator h3,
-.inner-page-drel h3 {
-    font-size: 36px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.inner-page-perforator p,
-.inner-page-drel p {
-    font-size: 18px;
-    font-weight: normal;
-}
+/*--------------popular-product-------------------------*/
 
 .content-title-section {
     display: flex;
-    max-height: 89px;
+    height: 89px;
     justify-content: space-between;
     align-items: center;
-    font-size: 30px;
-    line-height: 30px;
-    text-transform: uppercase;
-    color:#32425c;
+
     background-color: #f9f5f0;
 }
 
+.content-title-section h2 {
+    margin-left: 30px;
+
+    font-size: 30px;
+    text-transform: uppercase;
+    color:#32425c;
+}
+
 .content-title-section button{
+    margin-right: 24px;
+    width: 253px;
+
     height: 38px;
 }
 
