@@ -464,11 +464,11 @@ a {
     max-width: 100%;
     margin-bottom: 60px;
 
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .main-navigation-list a {
-    display: block;
+    flex-grow: 1;
     padding: 20px 33px; 
 
     background-color: #32425c;
@@ -663,7 +663,7 @@ a {
 
 .interactive-section-material::before {
     content: "";
-    
+
     position: absolute;
     width: 44px;
     height: 65px;
@@ -678,7 +678,7 @@ a {
 
 .interactive-section-instrument::before {
     content: "";
-    
+
     position: absolute;
     width: 75px;
     height: 61px;
@@ -693,7 +693,7 @@ a {
 
 .interactive-section-tehnics::before {
     content: "";
-    
+
     position: absolute;
     width: 78px;
     height: 62px;
@@ -708,7 +708,7 @@ a {
 
 .interactive-section-sales::before {
     content: "";
-    
+
     position: absolute;
     width: 59px;
     height: 72px;
@@ -723,7 +723,7 @@ a {
 
 .interactive-section-delivery::before {
     content: "";
-    
+
     position: absolute;
     width: 78px;
     height: 63px;
@@ -783,19 +783,7 @@ a {
     height: 38px;
 }
 
-.list-popular-product {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    margin-bottom: 21px;
-}
-
-.list-popular-product li {
-    border: 2px solid #eaeaea;
-    width: 216px;
-    height: 314px;
-}
+/*-----------------------------popular-brands-----------------------------*/
 
 .list-popular-brands {
     display: flex;
@@ -826,6 +814,8 @@ a {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     opacity: 0.5;
 }
+
+/*------------------------------main-service-section--------------------------------------------*/
 
 .main-service-section {
     background-color: #f4f8f9;
@@ -906,6 +896,8 @@ a {
     color: #32425c;
 }
 
+/*-------------company-description----main-contacts-------------------------*/
+
 .index-columns {
     display: flex;
     justify-content: space-between;
@@ -979,6 +971,8 @@ a {
     color: #ffffff;
     border: none;
 }
+
+/*------------main-catalog-----------------------------------------------------*/
 
 .catalag-title-container {
     display: flex;
@@ -1156,85 +1150,167 @@ a {
     border: 2px solid rgba(238,54,67,1);
 }
 
-.catalog {
-    margin-left: 20px;
+/*------------------------catalog------------------------------------------*/
+
+.catalog-list {
+    width: 700px;
+    margin: 20px auto;
+}
+
+.catalog-item {
+    position: relative;
+    display: inline-block;
+    width: 218px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    font-family: "Open Sans", sans-serif;
+    line-height: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+
+    border: 1px solid #ccc;
+}
+
+.catalog-item:nth-child(3n) {
+    margin-right: 0;
 }
 
 .catalog-list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 32px;
+    font-size: 0;
 }
 
-.catalog-list li {
-    border: 2px solid #eaeaea;
-    width: 220px;
-    height: 318px;
-    margin-bottom: 20px;
+.catalog-item {
+    font-size: 16px;
 }
 
-.catalog-list li:hover,
-.catalog-list li:focus {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+.catalog-item .flag {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+
+    width: 60px;
+    height: 60px;
+
+    text-indent: -1000px;
+    overflow: hidden;
+    z-index: 20;
 }
 
-.catalog-item h3,
-.catalog-item span,
-.catalog-item div {
-    font-family: 'PT Sans', sans-serif;
-    font-weight: bold;
+.catalog-item .flag-new {
+    background: url("img/new-flag.png") no-repeat 0 0;
 }
 
-.catalog-item h3 {
-    color: black;
+.catalog-item .actions {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 218px;
+    height: 88px;
+    padding: 40px 0;
+
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 10;
 }
 
-.button-buy {
-    color: white;
+.catalog-item .actions .button-buy,
+.catalog-item .actions .button-bookmark {
+    display: block;
+    width: 129px;
+    margin: 0 auto;
+    margin-bottom: 7px;
+    padding: 7px 0;
+
     background-color: #63a63e;
-    border: none;
-    border-bottom: 2px solid #367315;
+    border: 3px solid #63a63e;
+    border-bottom-color: #367315;
+    border-radius: 3px;
+
+    color: white;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: "Cuprum", sans-serif;
+    line-height: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
-.button-buy:hover,
-.button-buy:focus {
-    background-color: #5fbb2d;
-}
-
-.button-buy:active {
-    background-color: #518534;
-    border: none;
-}
-
-.button-bookmark {
+.catalog-item .actions .button-bookmark {
     color: #32425c;
-    border: 2px solid #63a63e;
+    background: white;
+    border-bottom-color: #63a63e;
 }
 
-.button-bookmark:hover,
-.button-bookmark:focus {
-    border-color: #32425c;
+.catalog-item .actions {
+    display: none;
 }
 
-.button-bookmark:active {
-    opacity: 0.5;
+.catalog-item:hover .actions {
+    display: block;
 }
 
-.old-price {
-    color: black;
-    opacity: 0.5;
+.catalog-item .image {
+    width: 218px;
+    height: 168px;
+}
+
+.catalog-item .image img {
+    max-width: 100%;
+}
+
+.catalog-item .title {
+    min-height: 40px;
+    padding: 0 25px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.catalog-item .discount {
+    min-height: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+    color: #999;
     text-decoration: line-through;
 }
 
-.new-price {
+.catalog-item .price {
+    position: relative;
+    width: 80px;
+    margin: 10px auto;
+    margin-bottom: 20px;
+    padding: 10px 30px;
+
     color: white;
-    background-color: #ee3643;
+    background: #ee3643;
+    border-radius: 3px;
 }
 
-.name-model {
-    text-transform: uppercase;
+.catalog-item .price:after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: -20px;
+
+    width: 0;
+    height: 0;
+
+    border: 20px solid white;
+    border-left-color: #ee3643;
 }
+
+.catalog-item:nth-child(3) .image {
+    opacity: 0;
+}
+
+.catalog-item:nth-child(3) .actions {
+    display: block;
+}
+
+/*-----------------perforetor-description------------------------------------------*/
 
 .perforators-description-section {
     display: flex;
