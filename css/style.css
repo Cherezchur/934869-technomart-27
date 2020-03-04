@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
 
-    font-family: 'Cuprum', sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 17px;
     font-weight: 400;
     color: #ffffff;
@@ -368,7 +368,7 @@ a {
     opacity: 0.5;
 }
 
-.registration{
+.registration {
     width: 150px;
     text-align: center;
 }
@@ -386,11 +386,10 @@ a {
 
 .user-button-container {
     flex-direction: column;
+    position: relative;
 }
 
 .user-name-button {
-    position: relative;
-
     width: 253px;
     padding-left: 47px;
 }
@@ -412,7 +411,7 @@ a {
     opacity: 0.5;
 }
 
-.user-name-button::after {
+.deauthorization::after {
     content: "";
 
     width: 20px;
@@ -431,7 +430,7 @@ a {
 
 .enter:hover::before,
 .user-name-button:hover::before,
-.user-name-button:hover::after {
+.deauthorization:hover::after {
     opacity: 1;
 }
 
@@ -957,7 +956,7 @@ a {
 
 .main-service-section p {
     font-size: 13px;
-    font-family: 'PT Sans', sans-serif;
+    font-family: "PT Sans", "Arial" sans-serif;
     color: black;
     /* font-weight: bold; */
     line-height: 24px;
@@ -1130,7 +1129,7 @@ a {
 
 .company-description p,
 .main-contacts p {
-    font-family: 'PT Sans', sans-serif;
+    font-family: "PT Sans", "Arial" sans-serif;
     line-height: 24px;
     font-weight: bold;
 }
@@ -1180,7 +1179,7 @@ a {
 
     padding-top: 9px;
     padding-bottom: 6px;
-    
+
 }
 
 .main-contacts div {
@@ -1265,7 +1264,7 @@ a {
 
 .filters-title-container,
 .catalog-filter {
-    font-family: 'PT Sans', sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-weight: bold;
 }
 
@@ -1278,7 +1277,7 @@ a {
 
 .filter fieldset {
     border: none;
-    font-family: 'PT Sans', sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 16px;
     text-transform: uppercase;
     color: #000000;
@@ -1357,7 +1356,7 @@ a {
 }
 
 .catalog-button {
-    font-family: 'PT Sans', sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     color: black;
     border: 2px solid rgba(0, 0, 0, 0.1);
 }
@@ -1390,7 +1389,7 @@ a {
     margin-right: 20px;
     margin-bottom: 20px;
 
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Arial" sans-serif;
     font-size: 18px;
     line-height: 20px;
     font-weight: bold;
@@ -1778,8 +1777,124 @@ a {
     margin: -1px;
   }
 
-.big-map,
-.user-form,
-.cart-form {
-    display: none;
+/*-----------------popups---user-form-------------------------------------------------------------*/
+
+.user-form {
+    position: fixed;
+    top: 120px;
+    left: 50%;
+
+    width: 460px;
+    margin-left: -310px;
+    padding-left: 80px;
+    padding-right: 80px;
+
+    font-size: 18px;
+    line-height: 18px;
+    color: black;
+
+    border-top: 7px solid #ff5357;
+    background: white;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
 }
+
+.modal-close {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+
+    width: 21px;
+    height: 21px;
+
+    border: 0;
+    background-color: transparent;
+
+    cursor: pointer;
+}
+
+.modal-close::after,
+.modal-close::before {
+    content: "";
+    width: 4px;
+    height: 24px;
+
+    position: absolute;
+    top: -2px;
+    left: 9px;
+
+
+    background-color: #ff5357;
+}
+
+.modal-close::after {
+    transform: rotate(45deg);
+}
+
+.modal-close::before {
+    transform: rotate(-45deg);
+}
+
+.user-form form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 460px;
+
+    margin-top: 25px;
+}
+
+.user-form label {
+    display: block;
+    padding-bottom: 11px;
+}
+
+.user-form input,
+.user-form textarea {
+    padding-left: 14px;
+    border-width: 2px;
+    border-color:rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+
+    font-family: "PT Sans", "Arial" sans-serif;
+    font-size: 13px;
+}
+
+.you-name,
+.you-email {
+    max-width: 220px;
+}
+
+.you-name input,
+.you-email input {
+    width: 202px;
+    height: 32px;
+}
+
+.mail-text {
+    margin: 0;
+    margin-bottom: 37px;
+}
+
+.mail-text textarea {
+    resize: none;
+
+    padding-top: 10px;
+    width: 440px;
+    height: 100px;
+}
+
+.user-form .submit-button {
+    height: 112px;
+    width: 620px;
+    margin-left: -80px;
+    margin-right: -80px;
+    background-color: #f4f4f4;
+}
+
+.submit-button button {
+    width: 460px;
+    margin: 37px 80px;
+    padding: 12px 0;
+}
+
+/*---------------------------modal-map--------------------------------*/

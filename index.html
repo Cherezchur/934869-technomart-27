@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i|PT+Sans:400,700&display=swap&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|Open+Sans:400,700|PT+Sans:400,400i,700&display=swap&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -361,21 +360,25 @@
     <section class="user-form">
       <h2 class="visually-hidden">Заблудились? Напишите нам!</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <P>
+        <P class="you-name">
           <label for="appointment-name">Ваше имя:</label>
           <input id="appointment-name" type="text" name="name" value="" placeholder="Имя Фамилия">
         </P>
-        <P>
+        <P class="you-email">
           <label for="appointment-email">Ваш e-mail:</label>
           <input id="appointment-email" type="email" name="email" value="" placeholder="email@example.com">
         </P>
-        <P>
+        <P class="mail-text">
           <label for="appointment-text">Текст письма:</label>
           <textarea id="appointment-text" rows="5" name="text" placeholder="В свободной форме"></textarea>
         </P>
-        <button type="submit">Отправить</button>
+        <div class="submit-button">
+          <button class="button" type="submit">Отправить</button>
+        </div>
       </form>
-      <button type="button"><img src="img/form-2.svg" width="21" height="21" alt="#">закрыть</button>
+      <button class="modal-close" type="button">
+        <span class="visually-hidden">закрыть</span>
+      </button>
     </section>
 
   </body>
