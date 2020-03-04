@@ -25,6 +25,7 @@ a {
     background-color: #ee3643;
     border: none;
     border-radius: 3px;
+    outline: none;
 }
 
 .button:hover,
@@ -79,7 +80,7 @@ a {
     padding: 0;
 
     background-color: #ee3643;
-    border-bottom: 5px solid #8f1f27;
+    border-bottom: 5px solid #c02c36;
 }
 
 .header-logo img {
@@ -95,10 +96,12 @@ a {
 .logo:hover,
 .logo:focus {
     background-color: #ca2c37;
+    border-color: #a3232d;
 }
 
 .logo:active {
     background-color: #ba2732;
+    border-color: #8f1f27;
 }
 
 .bookmark,
@@ -151,7 +154,8 @@ a {
     opacity: 0.5;
 }
 
-.bookmark:hover::before {
+.bookmark:hover::before,
+.bookmark:focus::before {
     opacity: 1;
 }
 
@@ -171,7 +175,8 @@ a {
     opacity: 0.5;
 }
 
-.cart:hover::before {
+.cart:hover::before,
+.cart:focus::before {
     opacity: 1;
 }
 
@@ -188,7 +193,8 @@ a {
     background-color: #ee3643;
 }
 
-.search:hover svg{
+.search:hover svg,
+.search:focus svg {
     opacity: 1;
 }
 
@@ -523,16 +529,15 @@ a {
     padding-right: 55px;
 }
 
-.menu-item:hover,
-.menu-item:focus {
+.main-navigation-list a:hover,
+.main-navigation-list a:focus {
     background-color: #293449;
 }
 
-.menu-item a:active {
+.main-navigation-list a:active {
     color: #a9a9a9;
-    border: none;
     background-color: #1d2739;
-    opacity: 0.5;
+    border-color: #1d2739;
 }
 
 /*----------------main---interactive-navigation---------------------------------------------------------------------*/
@@ -940,7 +945,7 @@ a {
 
 .support-title {
     padding-top: 38px;
-    width: 460px;
+    width: 400px;
     margin-bottom: 66px;
 }
 
@@ -954,7 +959,7 @@ a {
     font-size: 13px;
     font-family: 'PT Sans', sans-serif;
     color: black;
-    font-weight: bold;
+    /* font-weight: bold; */
     line-height: 24px;
 }
 
@@ -1100,10 +1105,12 @@ a {
     display: flex;
     justify-content: space-between;
     max-height: 368px;
-    margin-bottom: 86px;
+    margin-bottom: 89px;
     margin-top: 80px;
+
     color: black;
     font-size: 13px;
+    line-height: 24px;
 }
 
 .main-contacts {
@@ -1111,42 +1118,14 @@ a {
     margin-left: 100px;
 }
 
-.company-description,
-.main-contacts {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 0px;
-    padding: 0px;
-    max-height: 368px;
-}
-
 .about-company-columns h2 {
-    display: block;
     font-size: 30px;
     line-height: 30px;
     color: black;
     text-transform: uppercase;
     margin: 0px;
     padding: 0px;
-}
-
-.company-description p {
-    width: 550px;
-}
-
-.company-description ul {
-    margin-top: -10px;
-}
-
-.company-description a {
-    min-height: 38px;
-    width: 220px;
-}
-
-.contacts-form-button {
-    min-height: 38px;
-    width: 300px;
+    margin-bottom: 25px;
 }
 
 .company-description p,
@@ -1156,10 +1135,62 @@ a {
     font-weight: bold;
 }
 
+.company-description .slogan {
+    display: block;
+    width: 522px;
+    margin-bottom: 25px;
+}
+
+.company-description .deliveries {
+    display: block;
+    width: 390px;
+    margin-bottom: 21px;
+}
+
 .list-carriers {
+    padding-left: 35px;
+    margin-bottom: 35px;
+}
+
+.list-carriers li {
+    margin-bottom: 20px;
+
+    position: relative;
+
     font-size: 18px;
     font-weight: bold;
-    line-height: 2;
+    line-height: 20px;
+}
+
+.list-carriers li::after {
+    content: "";
+    width: 25px;
+    height: 2px;
+
+    position: absolute;
+    left: -36px;
+    top: 10px;
+
+    background-color: #ee3643;
+}
+
+.company-description a {
+    display: inline-block;
+    width: 220px;
+
+    padding-top: 9px;
+    padding-bottom: 6px;
+    
+}
+
+.main-contacts div {
+    margin-top: 30px;
+    margin-bottom: 33px;
+}
+
+.contacts-form-button {
+    min-height: 38px;
+    width: 100%;
 }
 
 .form-button {
@@ -1556,6 +1587,10 @@ a {
     font-size: 18px;
 }
 
+.footer-navigation-pane .container {
+    margin-bottom: 34px;
+}
+
 .footer-navigation-service {
     display: flex;
     justify-content: space-between;
@@ -1565,7 +1600,6 @@ a {
 .footer-navigation-product {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 53px;
 }
 
 .footer-adres {
@@ -1575,9 +1609,12 @@ a {
 
 .footer-logo {
     background-color: #ee3643;
-    border-bottom: 5px solid #8f1f27;
+    border-bottom: 5px solid #c02c36;
     width: 220px;
-    height: 63px;
+    height: 43px;
+    padding-top: 20px;
+
+    text-align: center;
 }
 
 .footer-conteiner-copyright {
@@ -1592,6 +1629,8 @@ a {
     justify-content: space-between;
     width: 547px;
     align-items: flex-end;
+
+    padding-bottom: 9px;
 }
 
 .navigation-service-list a,
@@ -1599,10 +1638,19 @@ a {
     color: #f3f7f9;
 }
 
+.footer-adres {
+    margin-top: -13px;
+    margin-left: 3px;
+
+    font-size: 18px;
+    line-height: 22px;
+}
+
 .navigation-product-list {
     display: flex;
     justify-content: space-between;
     width: 524px;
+    margin-top: 5px;
 }
 
 .navigation-product-list a,
@@ -1619,19 +1667,44 @@ a {
     text-decoration: underline;
 }
 
+.navigation-service-list a:active,
+.navigation-service-list a:active,
+.navigation-product-list a:active,
+.navigation-product-list a:active {
+    opacity: 0.5;
+}
+
+.footer-copyright a:active,
+.footer-copyright a:active {
+    color: #ee3643;
+}
+
 .footer-contacts {
     background-color: #293449;
     font-size: 16px;
+    height: 107px;
+}
+
+.footer-company-copyright {
+    margin-top: 22px;
 }
 
 .social-list {
     display: flex;
     justify-content: space-around;
-    width: 131px;
+    align-items: center;
+    width: 140px;
+
+    margin-top: 23px;
+    margin-left: 60px;
 }
 
 .social-list a {
+    position: relative;
+    padding: 11px 20px;
+
     background-color: #212a3a;
+    border-radius: 50%;
 }
 
 .social-list a:hover,
@@ -1639,10 +1712,62 @@ a {
     background-color: #ee3643;
 }
 
+.social-list .vkontakte::after {
+    content: "";
+    width: 26px;
+    height: 15px;
+
+    position: absolute;
+    top: 12px;
+    left: 7px;
+
+    background-image: url(img/vk-icon.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.social-list .facebook::after {
+    content: "";
+    width: 12px;
+    height: 22px;
+
+    position: absolute;
+    top: 10px;
+    left: 14px;
+
+    background-image: url(img/fb-icon.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.social-list .instagram::after {
+    content: "";
+    width: 21px;
+    height: 21px;
+
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    background-image: url(img/insta-icon.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
 .footer-copyright {
     display: flex;
     width: 300px;
     justify-content: space-between;
+}
+
+.footer-copyright div:first-child {
+    margin-top: 17px;
+    margin-left: 15px;
+}
+
+.footer-copyright div:last-child {
+    margin-top: 17px;
+    margin-left: 52px;
 }
 
 .visually-hidden {
