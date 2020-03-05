@@ -106,59 +106,56 @@
         <div class="catalog-container">
           <section class="catalog-filter">
             <form class="form-filter" method="get" action="https://echo.htmlacademy.ru">
-              <fieldset>
+              <fieldset class="price-filter">
                 <legend>Цена:</legend>
-                <div>
-                  <img src="img/filter-button.svg" width="20" height="22" alt="">
-                  <img src="img/line-filter.png" width="152" height="2" alt="">
-                  <img src="img/filter-button.svg" width="20" height="22" alt="">
+                <div class="price-slider"></div>
+                <div class="price-values">
+                  <textarea name="price" placeholder="0"></textarea>
+                  <span>-</span>
+                  <textarea name="price" placeholder="30000"></textarea>
                 </div>
-                <textarea class="price-values" rows="1" name="price">
-                  0
-                </textarea>
-                <span>-</span>
-                <textarea class="price-values" rows="1" name="price">
-                  30000
-                </textarea>
               </fieldset>
-              <fieldset>
+
+              <fieldset class="brend-filter">
                 <legend>Производители:</legend>
-                <ul>
-                  <li class="filter-options">
-                    <input class="filter-input filter-input-checkbox" type="checkbox" name="bosch" id="filter-bosch" checked>
+                <ul class="list-item brend-list">
+                  <li>
+                    <input class="visually-hidden" type="checkbox" name="bosch" id="filter-bosch" checked>
                     <label for="filter-bosch">BOSCH</label>
                   </li>
-                  <li class="filter-options">
-                    <input class="filter-input filter-input-checkbox" type="checkbox" name="interskol" id="filter-interskol" disabled>
+                  <li>
+                    <input class="visually-hidden" type="checkbox" name="interskol" id="filter-interskol" disabled>
                     <label for="filter-interskol">ИНТЕРСКОЛ</label>
                   </li>
-                  <li class="filter-options"> 
-                    <input class="filter-input filter-input-checkbox" type="checkbox" name="makita" id="filter-makita" checked>
+                  <li> 
+                    <input class="visually-hidden" type="checkbox" name="makita" id="filter-makita" checked>
                     <label for="filter-makita">MAKITA</label>
                   </li>
-                  <li class="filter-options">
-                    <input class="filter-input filter-input-checkbox" type="checkbox" name="dewalt" id="filter-dewalt">
+                  <li>
+                    <input class="visually-hidden" type="checkbox" name="dewalt" id="filter-dewalt">
                     <label for="filter-dewalt">DEWALT</label>
                   </li>
-                  <li class="filter-options">
-                    <input class="filter-input filter-input-checkbox" type="checkbox" name="dewalt" id="filter-hitachi">
+                  <li>
+                    <input class="visually-hidden" type="checkbox" name="dewalt" id="filter-hitachi">
                     <label for="filter-hitachi">HITACHI</label>
                   </li>
                 </ul>
               </fieldset>
-              <fieldset> 
+
+              <fieldset class="power-group"> 
                 <legend>Питание:</legend>
                 <ul>
                   <li>
-                    <input type="radio" name="power-group" value="rechargeable" id="filter-rechargeble" checked>
+                    <input class="visually-hidden" type="radio" name="power-group" value="rechargeable" id="filter-rechargeble" checked>
                     <label for="filter-rechargeble">Аккумуляторные</label>
                   </li>
                   <li>
-                    <input type="radio" name="power-group" value="networking" id="filter-networking">
+                    <input class="visually-hidden" type="radio" name="power-group" value="networking" id="filter-networking">
                     <label for="filter-networking">Сетевые</label>
                   </li>
                 </ul>
               </fieldset>
+
               <button class="catalog-button" type="submit">показать</button>
             </form>
           </section>
