@@ -1197,19 +1197,62 @@ a {
     border: none;
 }
 
-/*------------main-catalog-----------------------------------------------------*/
-
-.catalag-title-container {
-    display: flex;
-    flex-direction: column;
-}
+/*------------main-catalog---breadcrumbs--------------------------------------------------*/
 
 .breadcrumbs {
     display: flex;
     align-items: center;
-    min-height: 59px;
-    margin-bottom: -25px;
+    height: 59px;
+    margin-bottom: -20px;
 }
+.breadcrumbs a {
+    position: relative;
+    padding-right: 40px;
+}
+
+.breadcrumbs .home {
+    display: inline-block;
+    width: 14px;
+    height: 12px;
+}
+
+.breadcrumbs .home::after {
+    content: "";
+    width: 14px;
+    height: 12px;
+
+    position: absolute;
+    top: 2px;
+    left: -2px;
+
+    background-image: url(img/icon-home.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.breadcrumbs .breadcrumbs-item::after,
+.breadcrumbs .breadcrumbs-item::before {
+    content: "";
+    width: 2px;
+    height: 9px;
+
+    position: absolute;
+    left: -21px;
+    top: 8px;
+
+    background-color: #cfd3d9;
+}
+
+.breadcrumbs .breadcrumbs-item::after {
+    transform: rotate(45deg);
+}
+
+.breadcrumbs .breadcrumbs-item::before {
+    transform: rotate(-45deg);
+    top: 2px;
+}
+
+/*-----------------------catalog-title----filters---------------*/
 
 .catalog-title-section {
     font-size: 30px;
@@ -1217,7 +1260,9 @@ a {
     text-transform: uppercase;
     color:#32425c;
 
-    height: 89px;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     background-color: #f2f6f8;
 }
 
@@ -1228,13 +1273,24 @@ a {
     margin: 20px 0px;
 }
 
-.filters-title-container div,
+.filter,
 .catalog-sort {
     background-color: #f7f3ec;
+    border-radius: 3px;
+    padding-left: 18px;
 }
 
-.filters-title-container div {
-    width: 220px;
+.filter h2,
+.catalog-sort h2,
+.breadcrumbs a {
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 13px;
+    color: black;
+    text-transform: uppercase;
+}
+
+.filters-title-container .filter {
+    width: 202px;
 }
 
 .catalog-sort {
@@ -1244,89 +1300,22 @@ a {
     justify-content: space-between;
 }
 
-.sorting-arrows {
-    display: flex;
-}
-
-.catalog-container {
-    display: flex;
-    margin-bottom: 60px;
-}
-
-.catalog-filter {
-    min-width: 220px;
-    /*background-color: blanchedalmond;*/
-}
-
-.price-values {
-    width: 95px;
-}
-
-.filters-title-container,
-.catalog-filter {
-    font-family: "PT Sans", "Arial", sans-serif;
-    font-weight: bold;
-}
-
-.breadcrumbs a,
-.filters-title-container h2 {
-    font-size: 14px;
-    text-transform: uppercase;
-    color: black;
-}
-
-.filter fieldset {
-    border: none;
-    font-family: "PT Sans", "Arial", sans-serif;
-    font-size: 16px;
-    text-transform: uppercase;
-    color: #000000;
-  }
-
-.filter legend {
-    font-size: 21px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #000000;
-}
-
-.filter ul {
-    list-style: none;
-    line-height: 40px;
-}
-
-.filter input {
-    opacity: 0.5;
-}
-
-.filter input:hover,
-.filter input:focus {
-    opacity: 0.7;
-}
-
-.filter-input:disabled + label {
-    color: #000000;
-
-    opacity: 0.3;
-  }
-
-.filter button {
-    background-color: white;
-    border: 2px solid #eaeaea;
-}
-
 .list-sort {
     display: flex;
-    justify-content: space-between;
-    width: 354px;
+    justify-content: space-around;
     align-items: center;
-    margin-right: 46px;
+
+    padding-bottom: 3px;
+    margin-left: 10px;
 }
 
 .list-sort a {
+    margin-left: 75px;
+
     font-size: 14px;
+    line-height: 18px;
     text-transform: uppercase;
-    color: rgba(1,1,1,0.5);
+    color: rgba(0,0,0,0.5);
     border-bottom: 1px dotted #ee3643;
 }
 
@@ -1338,6 +1327,88 @@ a {
 
 .list-sort a:active {
     color: #ee3643;
+}
+
+.sorting-arrows {
+    display: flex;
+    width: 60px;
+
+    margin-top: 9px;
+}
+
+.sorting-arrows .descending {
+    margin-right: 21px;
+}
+
+.sorting-arrows polyline,
+.sorting-arrows polygon {
+    fill: rgba(0, 0, 0, 0.3);
+}
+
+.sorting-arrows a:hover polyline,
+.sorting-arrows a:hover polygon,
+.sorting-arrows a:focus polyline,
+.sorting-arrows a:focus polygon {
+    fill: rgba(0, 0, 0, 1);
+}
+
+.sorting-arrows a:active polyline,
+.sorting-arrows a:active polygon {
+    fill: #ee3643;
+}
+
+
+.catalog-container {
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.catalog-filter {
+    min-width: 220px;
+}
+
+.price-values {
+    width: 95px;
+}
+
+.form-filter fieldset {
+    border: none;
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #000000;
+  }
+
+.form-filter legend {
+    font-size: 21px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.form-filter ul {
+    list-style: none;
+    line-height: 40px;
+}
+
+.form-filter input {
+    opacity: 0.5;
+}
+
+.form-filter input:hover,
+.form-filter input:focus {
+    opacity: 0.7;
+}
+
+.filter-input:disabled + label {
+    color: #000000;
+
+    opacity: 0.3;
+  }
+
+.form-filter button {
+    background-color: white;
+    border: 2px solid #eaeaea;
 }
 
 .list-catalog-button {
@@ -1379,7 +1450,7 @@ a {
 
 .catalog-list {
     width: 700px;
-    margin: 20px auto;
+    /* margin: 20px auto; */
 }
 
 .catalog-item {
@@ -1780,6 +1851,7 @@ a {
 /*-----------------popups---user-form-------------------------------------------------------------*/
 
 .user-form {
+    display: none;
     position: fixed;
     top: 120px;
     left: 50%;
@@ -1807,6 +1879,7 @@ a {
     height: 21px;
 
     border: 0;
+    outline: none;
     background-color: transparent;
 
     cursor: pointer;
@@ -1854,9 +1927,20 @@ a {
     border-width: 2px;
     border-color:rgba(0, 0, 0, 0.1);
     border-radius: 3px;
+    outline: none;
 
     font-family: "PT Sans", "Arial" sans-serif;
     font-size: 13px;
+}
+
+.user-form input:hover,
+.user-form textarea:hover {
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+.user-form input:focus,
+.user-form textarea:focus {
+    border-color: rgb(238, 54, 67, 1);
 }
 
 .you-name,
@@ -1897,4 +1981,21 @@ a {
     padding: 12px 0;
 }
 
-/*---------------------------modal-map--------------------------------*/
+.big-map {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 50%;
+
+    width: 940px;
+    height: 446px;
+    margin-left: -470px;
+    padding: 0;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+}
+
+.big-map img {
+    width: 940px;
+    height: 446px;
+    padding: 0;
+}

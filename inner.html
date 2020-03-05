@@ -65,96 +65,100 @@
 
     <main>
       <div class="container">
-
         <ul class="list-item breadcrumbs">
-            <li><a href="index.html"><img src="img/icon-home.svg" width="14" height="14" alt="Главная страница"></a></li>
-            <li><a href="#">Каталог</a></li>
-            <li><a href="#">Инструмент</a></li>
-            <li><a href="#">Перфораторы</a></li>
+            <li><a class="home" href="index.html"></a></li>
+            <li><a class="breadcrumbs-item" href="#">Каталог</a></li>
+            <li><a class="breadcrumbs-item" href="#">Инструмент</a></li>
+            <li><a class="breadcrumbs-item" href="#">Перфораторы</a></li>
         </ul>
 
         <h1 class="catalog-title-section">Перфораторы</h1>
 
-          <div class="filters-title-container">
-            <div>
-              <h2 >Фильтр:</h2>
-            </div>
-            <section class="catalog-sort">
-              <div>
-                <h2>Сортировка:</h2>
-              </div>
-              <ul class="list-item list-sort">
-                <li><a href="#">По цене</a></li>
-                <li><a href="#">По типу</a></li>
-                <li><a href="#">По функционалу</a></li>
-              </ul>
-              <div class="sorting-arrows">
-                <div>
-                  <a href="#"><img src="img/icon-up-dir.svg" width="11" height="10" alt=""></a>
-                </div>
-                <div>
-                  <a href="#"><img src="img/icon-down-dir.svg" width="11" height="10" alt=""></a>
-                </div>
-              </div>
-            </section>
+        <div class="filters-title-container">
+          <div class="filter">
+            <h2 >Фильтр:</h2>
           </div>
 
-          <div class="catalog-container">
-            <section class="catalog-filter">
-              <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-                <fieldset>
-                  <legend>Цена:</legend>
-                  <div>
-                    <img src="img/filter-button.svg" width="20" height="22" alt="">
-                    <img src="img/line-filter.png" width="152" height="2" alt="">
-                    <img src="img/filter-button.svg" width="20" height="22" alt="">
-                  </div>
-                  <textarea class="price-values" rows="1" name="price">
-                    0
-                  </textarea>
-                  <span>-</span>
-                  <textarea class="price-values" rows="1" name="price">
-                    30000
-                  </textarea>
-                </fieldset>
-                <fieldset>
-                  <legend>Производители:</legend>
-                    <ul>
-                      <li class="filter-options">
-                        <input class="filter-input filter-input-checkbox" type="checkbox" name="bosch" id="filter-bosch" checked>
-                        <label for="filter-bosch">BOSCH</label>
-                      </li>
-                      <li class="filter-options">
-                        <input class="filter-input filter-input-checkbox" type="checkbox" name="interskol" id="filter-interskol" disabled>
-                        <label for="filter-interskol">ИНТЕРСКОЛ</label>
-                      </li>
-                      <li class="filter-options"> 
-                        <input class="filter-input filter-input-checkbox" type="checkbox" name="makita" id="filter-makita" checked>
-                        <label for="filter-makita">MAKITA</label>
-                      </li>
-                      <li class="filter-options">
-                        <input class="filter-input filter-input-checkbox" type="checkbox" name="dewalt" id="filter-dewalt">
-                        <label for="filter-dewalt">DEWALT</label>
-                      </li>
-                      <li class="filter-options">
-                        <input class="filter-input filter-input-checkbox" type="checkbox" name="dewalt" id="filter-hitachi">
-                        <label for="filter-hitachi">HITACHI</label>
-                      </li>
-                    </ul>
-                </fieldset>
-                <fieldset> 
-                  <legend>Питание:</legend>
-                    <ul>
-                      <li>
-                        <input type="radio" name="power-group" value="rechargeable" id="filter-rechargeble" checked>
-                        <label for="filter-rechargeble">Аккумуляторные</label>
-                      </li>
-                      <li>
-                        <input type="radio" name="power-group" value="networking" id="filter-networking">
-                        <label for="filter-networking">Сетевые</label>
-                      </li>
-                    </ul>
-                </fieldset>
+          <section class="catalog-sort">
+            <h2>Сортировка:</h2>
+            <ul class="list-item list-sort">
+              <li><a href="#">По цене</a></li>
+              <li><a href="#">По типу</a></li>
+              <li><a href="#">По функционалу</a></li>
+            </ul>
+            <ul class="list-item sorting-arrows">
+              <li>
+                <a class="descending" href="#"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
+                <polygon fill="#231F20" points="5.5,0 0,10 11,10 "/>
+                </svg></a>
+              </li>
+              <li>
+                <a class="ascending" href="#"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
+                <polyline fill="#231F20" points="5.5,10 0,0 11,0 "/>
+                </svg></a>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="catalog-container">
+          <section class="catalog-filter">
+            <form class="form-filter" method="get" action="https://echo.htmlacademy.ru">
+              <fieldset>
+                <legend>Цена:</legend>
+                <div>
+                  <img src="img/filter-button.svg" width="20" height="22" alt="">
+                  <img src="img/line-filter.png" width="152" height="2" alt="">
+                  <img src="img/filter-button.svg" width="20" height="22" alt="">
+                </div>
+                <textarea class="price-values" rows="1" name="price">
+                  0
+                </textarea>
+                <span>-</span>
+                <textarea class="price-values" rows="1" name="price">
+                  30000
+                </textarea>
+              </fieldset>
+              <fieldset>
+                <legend>Производители:</legend>
+                <ul>
+                  <li class="filter-options">
+                    <input class="filter-input filter-input-checkbox" type="checkbox" name="bosch" id="filter-bosch" checked>
+                    <label for="filter-bosch">BOSCH</label>
+                  </li>
+                  <li class="filter-options">
+                    <input class="filter-input filter-input-checkbox" type="checkbox" name="interskol" id="filter-interskol" disabled>
+                    <label for="filter-interskol">ИНТЕРСКОЛ</label>
+                  </li>
+                  <li class="filter-options"> 
+                    <input class="filter-input filter-input-checkbox" type="checkbox" name="makita" id="filter-makita" checked>
+                    <label for="filter-makita">MAKITA</label>
+                  </li>
+                  <li class="filter-options">
+                    <input class="filter-input filter-input-checkbox" type="checkbox" name="dewalt" id="filter-dewalt">
+                    <label for="filter-dewalt">DEWALT</label>
+                  </li>
+                  <li class="filter-options">
+                    <input class="filter-input filter-input-checkbox" type="checkbox" name="dewalt" id="filter-hitachi">
+                    <label for="filter-hitachi">HITACHI</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset> 
+                <legend>Питание:</legend>
+                <ul>
+                  <li>
+                    <input type="radio" name="power-group" value="rechargeable" id="filter-rechargeble" checked>
+                    <label for="filter-rechargeble">Аккумуляторные</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="power-group" value="networking" id="filter-networking">
+                    <label for="filter-networking">Сетевые</label>
+                  </li>
+                </ul>
+              </fieldset>
               <button class="catalog-button" type="submit">показать</button>
             </form>
           </section>
