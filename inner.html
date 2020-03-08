@@ -12,7 +12,7 @@
     <header class="main-header">
       <nav class="header-navigation">
             <ul class="list-item header-navigation-list container">
-              <li><a class="logo header-logo" href="#"><img src="img/logo-technomart.svg" width="109" height="19" alt="Логотип интернет-магазина Техномарт"></a></li>  
+              <li><a class="logo header-logo" href="index.html"><img src="img/logo-technomart.svg" width="109" height="19" alt="Логотип интернет-магазина Техномарт"></a></li>
               <li><a class="search" href="#"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px"
                 height="17px" viewBox="0 0 17 17" enable-background="new 0 0 17 17" xml:space="preserve">
                 <g id="Layer_1">
@@ -23,7 +23,7 @@
                     C10.532,2,13,4.467,13,7.5c0,3.032-2.468,5.5-5.5,5.5C4.467,13,2,10.532,2,7.5z"/>
                 </g>
                 </svg>Поиск:</a></li>
-              <li><a class="bookmark" href="#">Закладки: 0</a></li>  
+              <li><a class="bookmark" href="#">Закладки: 0</a></li>
               <li><a class="cart goods-cart" href="#">Корзина: 10</a></li>
               <li><a class="place-order" href="#">Оформить заказ</a></li>
             </ul>
@@ -46,7 +46,7 @@
                 <li><a href="#">Личный кабинет</a></li>
               </ul>
             </div>
-          </div>  
+          </div>
 
           <nav>
             <ul class="list-item main-navigation-list">
@@ -127,7 +127,7 @@
                     <input class="visually-hidden" type="checkbox" name="interskol" id="filter-interskol" disabled>
                     <label for="filter-interskol">ИНТЕРСКОЛ</label>
                   </li>
-                  <li> 
+                  <li>
                     <input class="visually-hidden" type="checkbox" name="makita" id="filter-makita" checked>
                     <label for="filter-makita">MAKITA</label>
                   </li>
@@ -142,9 +142,9 @@
                 </ul>
               </fieldset>
 
-              <fieldset class="power-group"> 
+              <fieldset class="power-group">
                 <legend>Питание:</legend>
-                <ul>
+                <ul class="list-item power-group-list">
                   <li>
                     <input class="visually-hidden" type="radio" name="power-group" value="rechargeable" id="filter-rechargeble" checked>
                     <label for="filter-rechargeble">Аккумуляторные</label>
@@ -164,6 +164,7 @@
               <h2 class="visually-hidden">Список товаров</h2>
               <ul class="list-item catalog-list">
                   <li class="catalog-item">
+                    <div class="flag flag-new visually-hidden">новинка</div>
                     <div class="actions">
                       <a href="#" class="button-buy">Купить</a>
                       <a href="#" class="button-bookmark">В закладки</a>
@@ -174,6 +175,7 @@
                     <div class="price">15500 Р.</div>
                   </li>
                   <li class="catalog-item">
+                    <div class="flag flag-new visually-hidden">новинка</div>
                     <div class="actions">
                       <a href="#" class="button-buy">Купить</a>
                       <a href="#" class="button-bookmark">В закладки</a>
@@ -196,6 +198,7 @@
                   </li>
 
                   <li class="catalog-item">
+                    <div class="flag flag-new visually-hidden">новинка</div>
                     <div class="actions">
                       <a href="#" class="button-buy">Купить</a>
                       <a href="#" class="button-bookmark">В закладки</a>
@@ -217,6 +220,7 @@
                     <div class="price">25500 Р.</div>
                   </li>
                   <li class="catalog-item">
+                    <div class="flag flag-new visually-hidden">новинка</div>
                     <div class="actions">
                       <a href="#" class="button-buy">Купить</a>
                       <a href="#" class="button-bookmark">В закладки</a>
@@ -239,6 +243,7 @@
                     <div class="price">15500 Р.</div>
                   </li>
                   <li class="catalog-item">
+                    <div class="flag flag-new visually-hidden">новинка</div>
                     <div class="actions">
                       <a href="#" class="button-buy">Купить</a>
                       <a href="#" class="button-bookmark">В закладки</a>
@@ -249,6 +254,7 @@
                     <div class="price">25500 Р.</div>
                   </li>
                   <li class="catalog-item">
+                    <div class="flag flag-new visually-hidden">новинка</div>
                     <div class="actions">
                       <a href="#" class="button-buy">Купить</a>
                       <a href="#" class="button-bookmark">В закладки</a>
@@ -261,32 +267,29 @@
               </ul>
 
               <ul class="list-item list-catalog-button">
-                <li class="selected-button">
-                  <a href="#">1</a>
+                <li>
+                  <a class="selected-button catalog-button" href="#">1</a>
                 </li>
-                <li class="catalog-button">
-                  <a href="#">2</a>
+                <li>
+                  <a class="catalog-button" href="#">2</a>
                 </li>
-                <li class="catalog-button">
-                  <a href="#">3</a>
+                <li>
+                  <a class="catalog-button" href="#">3</a>
                 </li>
-                <li class="catalog-button">
-                  <a>следующая</a>
+                <li>
+                  <a class="catalog-button next-button" href="#">следующая</a>
                 </li>
               </ul>
           </section>
         </div>
-      </div>  
+      </div>
 
       <section class="perforators-description-section">
         <div class="perforator-description container">
-          <div class="perforator-description-title">
-            <h2>пара слов о перфораторах</h2>
-          </div>
-          <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
-            Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. 
-            В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
-          </p>
+          <h2>пара слов о перфораторах</h2>
+          <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.</p>
+          <p>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.</p>
+          <p>В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
         </div>
       </section>
     </main>
@@ -296,7 +299,7 @@
         <div class="container">
           <div class="footer-navigation-service">
             <div class="logo footer-logo">
-              <a>
+              <a href="index.html">
                 <img src="img/logo-technomart.svg" width="138" height="23" alt="Интернет-магазина Техномарт">
               </a>
             </div>
@@ -328,9 +331,9 @@
                 <p>&copy; 2010–2019 Компания «Техномарт»<br>Все права защищены</p>
               </div>
               <ul class="list-item social-list">
-                <li><a href="#"><img src="img/vk-icon.svg" width="26" height="15" alt="Вконтакте"></a></li>
-                <li><a href="#"><img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук"></a></li>
-                <li><a href="#"><img src="img/insta-icon.svg" width="21" height="21" alt="Инстаграм"></a></li>
+                <li><a href="#" class="vkontakte"></a></li>
+                <li><a href="#" class="facebook"></a></li>
+                <li><a href="#" class="instagram"></a></li>
               </ul>
               <div class="footer-copyright">
                 <div>
@@ -349,12 +352,17 @@
       </div>
     </footer>
 
-      <section class="cart-form">
-        <h2>Товар добавлен в корзину!</h2>
-        <img src="img/form-1.svg" width="66" height="66" alt="">
-        <a href="">Оформить заказ</a>
-        <button type="button">Продолжить покупки</button>
-        <button type="button"><img src="img/form-2.svg" width="21" height="21" alt="">закрыть</button>
+      <section class="user-form">
+        <div class="cart-form">
+          <h2>Товар добавлен в корзину!</h2>
+          <div class="modal-buttons">
+            <a class="button" href="#">Оформить заказ</a>
+            <button class="button" type="button">Продолжить покупки</button>
+          </div>
+        </div>
+        <button class="modal-close" type="button">
+          <span class="visually-hidden">закрыть</span>
+        </button>
       </section>
 
     </body>

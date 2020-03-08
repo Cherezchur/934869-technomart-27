@@ -1367,7 +1367,7 @@ a {
 
 .catalog-container {
     display: flex;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 }
 
 .price-values {
@@ -1389,7 +1389,8 @@ a {
     color: #000000;
 }
 
-.form-filter .price-filter {
+.form-filter .price-filter,
+.form-filter .brend-filter {
     border-bottom: 1px solid #ccc;
 }
 
@@ -1439,18 +1440,29 @@ fieldset .price-slider {
     color: black;
 }
 
-.form-filter .brend-filter {
+.form-filter .brend-filter,
+.form-filter .power-group {
     margin-top: 20px;
 
     font-size: 15px;
     line-height: 20px;
 }
 
-.brend-list {
+.form-filter .power-group {
+    margin-top: 23px;
+}
+
+.brend-list,
+.power-group-list {
     margin-top: 19px;
 }
 
-.brend-list li {
+.brend-list {
+    margin-bottom: 2px;
+}
+
+.brend-list li,
+.power-group li {
     padding-left: 33px;
     padding-bottom: 20px;
 }
@@ -1491,11 +1503,6 @@ fieldset .price-slider {
     background-position: 0 0;
 }
 
-.brend-list label,
-.brend-list label {
-    opacity: 0.7;
-}
-
 .brend-list input[type="checkbox"]::after,
 .brend-list input[type="checkbox"]:checked::after {
     opacity: 0.3;
@@ -1516,10 +1523,53 @@ fieldset .price-slider {
     opacity: 0.1;
 }
 
+.power-group-list input[type="radio"] {
+    position: relative;
+}
+
+.power-group-list input[type="radio"]:checked::after {
+    content: "";
+    width: 25px;
+    height: 25px;
+
+    position: absolute;
+    left: -33px;
+    top: -16px;
+
+    background-image: url(img/radio-on.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.3;
+}
+
+.power-group-list input[type="radio"]::after {
+    content: "";
+    width: 25px;
+    height: 25px;
+
+    position: absolute;
+    left: -33px;
+    top: -16px;
+
+    background-image: url(img/radio-off.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.3;
+}
+
+.power-group-list input[type="radio"]:hover::after,
+.power-group-list input[type="radio"]:focus::after {
+    opacity: 0.5;
+}
+
 .form-filter button {
     background-color: white;
-    border: 2px solid #eaeaea;
+    border: 1px solid #eaeaea;
+
+    margin-top: 58px;
+    padding: 8px 36px;
 }
+
 
 /*------------------------catalog------------------------------------------*/
 
@@ -1535,7 +1585,7 @@ fieldset .price-slider {
     margin-right: 20px;
     margin-bottom: 20px;
 
-    font-family: "Open Sans", "Arial" sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 18px;
     line-height: 20px;
     font-weight: bold;
@@ -1698,37 +1748,49 @@ fieldset .price-slider {
 
 .list-catalog-button {
     display: flex;
-    justify-content: space-between;
-    width: 284px;
+
+    margin-top: 44px;
+    font-style: "Cuprum", "Arial", sans-serif;
+    font-size: 13px;
+    line-height: 18px;
 }
 
-.list-catalog-button li {
-    width: 34px;
-    height: 34px;
+.list-catalog-button a {
+    padding: 10px 15px;
+    margin-right: 10px;
+
+    border-radius: 3px;
 }
 
-.list-catalog-button li:last-child {
-    width: 140px;
+.list-catalog-button .next-button {
+    padding-top: 8px;
+    padding-bottom: 9px;
+    padding-left: 31px;
+    padding-right: 31px;
+
+    font-size: 15px;
+    text-size-adjust: 110%;
 }
 
 .catalog-button {
     font-family: "PT Sans", "Arial", sans-serif;
     color: black;
-    border: 2px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .catalog-button:hover,
 .catalog-button:focus {
-    border: 2px solid rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .catalog-button:active {
-    border: 2px solid rgba(238,54,67,1);
+    border: 1px solid rgba(238,54,67,1);
 }
 
 .selected-button {
     background-color: #ee3643;
-    border: 2px solid rgba(238,54,67,1);
+    border: 1px solid #ee3643;
+    color: white;
 }
 
 /*-----------------perforetor-description------------------------------------------*/
@@ -1737,24 +1799,31 @@ fieldset .price-slider {
     display: flex;
     align-items: center;
     background-color: #f2f6f8;
-    height: 261px;
 }
 
-.perforator-description {
-    padding: 0px;
-}
+.perforator-description h2 {
+    margin-top:  64px;
+    margin-bottom: 26px;
 
-.perforator-description-title {
     font-size: 30px;
     line-height: 30px;
+    font-weight: normal;
     text-transform: uppercase;
     color:#32425c;
 }
 
 .perforator-description p {
+    font-family: "PT Sans", Arial, sans-serif;
     font-size: 13px;
     line-height: 20px;
     color: black;
+
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.perforator-description {
+    margin-bottom: 64px;
 }
 
 /*--------------footer----------------------------------------------------------------------------------*/
@@ -2110,4 +2179,67 @@ fieldset .price-slider {
     width: 940px;
     height: 446px;
     padding: 0;
+}
+
+.cart-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-form h2 {
+    position: relative;
+    width: 100%;
+
+    margin: 66px 0;
+    padding-left: 96px;
+}
+
+.cart-form h2:after {
+    content: "";
+    width: 66px;
+    height: 66px;
+
+    position: absolute;
+    top: -20px;
+    left: 0;
+
+    background-image: url(img/form-1.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.cart-form .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f1f1f1;
+
+    margin-left: -80px;
+    margin-right: -80px;
+}
+
+.modal-buttons a,
+.modal-buttons button {
+    text-align: center;
+
+    height: 38px;
+    width: 220px;
+    margin: 37px 0;
+}
+
+.modal-buttons a {
+    height: 14px;
+    margin-left: 80px;
+    padding: 12px 0;
+}
+
+.modal-buttons button {
+    margin-right: 80px;
+    background: white;
+    color: black;
+}
+
+.modal-buttons button:hover,
+.modal-buttons button:focus,
+.modal-buttons button:active {
+    color: white;
 }
