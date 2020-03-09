@@ -83,31 +83,33 @@
           <div class="interactive-section-container">
             <div class="interactive-section-slaider">
               <div class="slaider">
-                <div class="slaider-menu">
+                <input class="visually-hidden" type="radio" id="btn-1" name="toggle">
+                <input class="visually-hidden" type="radio" id="btn-2" name="toggle" checked>  
+                <div class="slaider-inner">
                     <div class="slaider-slaiders">
-                        <div class="slaider-inner slaider-drel">
-                            <div class="slaider-description">
-                                <h3>Дрели</h3>
-                                <p>Соседям на радость!</p>
-                            </div>
-                            <img src="img/slaider-drel.jpg" width="620" height="266" alt="Рабочий сверлит стену аккумуляторной дрелью бош">
-                        </div>
-                        <div class="slaider-inner slaider-perforator">
-                            <div class="slaider-description">
-                                <h3>Перфораторы</h3>
-                                <p>Настоящие мужские игрушки</p>
-                            </div>
-                            <img src="img/slaider-perforators.jpg" width="620" height="266" alt="Рабочий сверлит стену электрическим перфоратором бош">
-                        </div>
+                      <div class="slaider-drel">
+                          <div class="slaider-description">
+                              <h3>Дрели</h3>
+                              <p>Соседям на радость!</p>
+                          </div>
+                          <img src="img/slaider-drel.jpg" width="620" height="266" alt="Рабочий сверлит стену аккумуляторной дрелью бош">
+                      </div>
+                      <div class="slaider-perforator">
+                          <div class="slaider-description">
+                              <h3>Перфораторы</h3>
+                              <p>Настоящие мужские игрушки</p>
+                          </div>
+                          <img src="img/slaider-perforators.jpg" width="620" height="266" alt="Рабочий сверлит стену электрическим перфоратором бош">
+                      </div>
                     </div>
                 </div>
-
-                <div class="arrow-slider"></div>
-                <input type="radio" id="switch-left" name="button" class="visually-hidden">
-                <input type="radio" id="switch-right" name="button" class="visually-hidden" checked>
-                <div class="radio">
-                  <label for="switch-left"></label>
-                  <label for="switch-right"></label>
+                <div class="slaider-control">
+                  <label for="btn-1"></label>
+                  <label for="btn-2"></label>
+                </div>
+                <div class="arrow-slider">
+                  <label for="btn-1"></label>
+                  <label for="btn-2"></label>  
                 </div>
                 <a class="slaider-button button button-open-catalog" href="inner.html">Открыть каталог</a>
               </div>

@@ -599,31 +599,53 @@ a {
 }
 
 /*--------slader---------------------------------*/
+
+.slaider-section {
+    margin: 40px auto;
+    width: 620px;
+    background-color: white;
+}
+
 .slaider {
     position: relative;
 }
 
-.slaider-menu {
+.slaider-inner {
     overflow: hidden;
 }
 
 .slaider-slaiders {
-    width: 200%;
+    width: 300%;
 }
 
-.slaider-slaiders .slaider-inner {
+.slaider-slaiders div {
     float: left;
     width: 620px;
     height: 266px;
 }
 
-.slaider-inner {
+.slaider-drel,
+.slaider-perforator {
     position: relative;
 }
 
-.slaider-inner .slaider-description {
+.slaider-drel .slaider-description,
+.slaider-perforator .slaider-description {
     position: absolute;
     left: 24px;
+}
+
+#btn-1:checked ~ .slaider-control label[for="btn-1"],
+#btn-2:checked ~ .slaider-control label[for="btn-2"] {
+    background-color: #ee3643;
+}
+
+#btn-1:checked ~ .slaider-inner .slaider-slaiders {
+    transform: translate(-620px);
+}
+
+#btn-2:checked ~ .slaider-inner .slaider-sliders {
+    transform: translate(-620px);
 }
 
 .slaider-description h3 {
@@ -640,7 +662,6 @@ a {
 .slaider-description p {
     display: block;
     margin: 0;
-    /* margin-top: 3px; */
 
     font-size: 18px;
     line-height: 24px;
@@ -659,41 +680,13 @@ a {
     height: 266px;
 }
 
-.arrow-slider::after {
-    content: "";
-    width: 22px;
-    height: 40px;
-
-    position: absolute;
-    top: 114px;
-    left: 25px;
-
-    background-image: url("img/icon-left.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-}
-
-.arrow-slider::before {
-    content: "";
-    width: 22px;
-    height: 40px;
-
-    position: absolute;
-    top: 114px;
-    right: 20px;
-
-    background-image: url("img/icon-right.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-}
-
-.radio {
+.slaider-control {
     position: absolute;
     top: 215px;
     left: 296px;
 }
 
-.radio label {
+.slaider-control label {
     display: inline-block;
     width: 5px;
     height: 5px;
@@ -707,18 +700,34 @@ a {
     cursor: pointer;
 }
 
-#switch-left:checked ~ .radio label[for="switch-left"],
-#switch-right:checked ~ .radio label[for="switch-right"] {
-    background-color: #ee3643;
-}
+.arrow-slider label[for="btn-1"] {
+    content: "";
+    width: 22px;
+    height: 40px;
 
-#switch-right:checked ~ .slaider-menu .slaider-slaiders {
-    transform: translate(620px);
-}
-
-.slaider-button {
     position: absolute;
-    outline: none;
+    top: 114px;
+    left: 25px;
+
+    background-image: url("img/icon-left.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+}
+
+.arrow-slider label[for="btn-2"] {
+    content: "";
+    width: 22px;
+    height: 40px;
+
+    position: absolute;
+    top: 114px;
+    right: 20px;
+
+    background-image: url("img/icon-right.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
 }
 
 .slaider a {
@@ -729,10 +738,9 @@ a {
     height: 27px;
 
     padding-top: 11px;
-}
 
-.button-open-catalog {
-    line-height: 18px;
+    position: absolute;
+    outline: none;
 }
 
 /*----------end-of-slaider------------*/
@@ -882,11 +890,12 @@ a {
 }
 
 .content-title-section h2 {
-    margin-left: 30px;
+    margin-left: 29px;
 
     font-size: 30px;
     text-transform: uppercase;
     color:#32425c;
+    letter-spacing: -0.9px;
 }
 
 .content-title-section button{
@@ -948,17 +957,27 @@ a {
     margin-bottom: 66px;
 }
 
-.support-title h2{
+.support-title h2 {
     font-size: 30px;
     color: black;
     text-transform: uppercase;
+    letter-spacing: -1px;
 }
 
-.main-service-section p {
+.support-title p {
     font-size: 13px;
-    font-family: "PT Sans", "Arial" sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     color: black;
-    /* font-weight: bold; */
+    line-height: 24px;
+}
+
+.service-description-section p {
+    display: block;
+    margin-top: 23px;
+
+    font-size: 13px;
+    font-family: "PT Sans", "Arial", sans-serif;
+    color: black;
     line-height: 24px;
 }
 
@@ -1031,11 +1050,7 @@ a {
     font-size: 36px;
     text-transform: uppercase;
     color: #32425c;
-}
-
-.service-description-section p {
-    display: block;
-    margin-top: 23px;
+    letter-spacing: -0.5px;
 }
 
 .delivery,
@@ -1122,6 +1137,8 @@ a {
     line-height: 30px;
     color: black;
     text-transform: uppercase;
+    letter-spacing: -0.9px;
+
     margin: 0px;
     padding: 0px;
     margin-bottom: 25px;
@@ -1129,9 +1146,9 @@ a {
 
 .company-description p,
 .main-contacts p {
-    font-family: "PT Sans", "Arial" sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     line-height: 24px;
-    font-weight: bold;
+    letter-spacing: 0.11px;
 }
 
 .company-description .slogan {
@@ -1142,8 +1159,8 @@ a {
 
 .company-description .deliveries {
     display: block;
-    width: 390px;
-    margin-bottom: 21px;
+    width: 400px;
+    margin-bottom: 20px;
 }
 
 .list-carriers {
@@ -1188,7 +1205,7 @@ a {
 }
 
 .contacts-form-button {
-    min-height: 38px;
+    padding: 12px 0;
     width: 100%;
 }
 
@@ -1585,11 +1602,11 @@ fieldset .price-slider {
     margin-right: 20px;
     margin-bottom: 20px;
 
-    font-family: "Open Sans", "Arial", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 18px;
     line-height: 20px;
     font-weight: bold;
-    letter-spacing: -0.4px;
+    letter-spacing: 1px;
     text-align: center;
     color: black;
 
