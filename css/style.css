@@ -58,7 +58,7 @@ a {
 
 .header-navigation {
     display: flex;
-    max-height: 42px;
+    min-height: 42px;
 
     background-color: #293449;
 }
@@ -66,12 +66,13 @@ a {
 .header-navigation-list {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .header-navigation-list a {
     display: block;
     padding-top: 11px;
-    padding-bottom: 11px;
+    padding-bottom: 12px;
 }
 
 .header-navigation-list .header-logo {
@@ -80,17 +81,22 @@ a {
     padding: 0;
 
     background-color: #ee3643;
-    border-bottom: 5px solid #c02c36;
+}
+
+.header-navigation-list .header-logo:after {
+    content: "";
+    width: 220px;
+    height: 5px;
+
+    position: absolute;
+    top: 42px;
+    left: 0;
+
+    background-color: #b52a34;
 }
 
 .header-logo img {
-    padding-top: 12px;
-}
-
-.header-logo img{
-    margin-bottom: 11px;
-    margin-left: 55px;
-    margin-left: 56px;
+    padding: 12px 55px;
 }
 
 .logo:hover,
@@ -328,6 +334,7 @@ a {
 
 .user-navigation {
     display: flex;
+    flex-wrap: wrap;
     width: 280px;
     justify-content: space-between;
 
@@ -348,7 +355,7 @@ a {
 
 .enter {
     position: relative;
-    width: 75px;
+    min-width: 75px;
     padding-left: 46px;
 }
 
@@ -369,7 +376,7 @@ a {
 }
 
 .registration {
-    width: 150px;
+    min-width: 150px;
     text-align: center;
 }
 
@@ -436,7 +443,7 @@ a {
 
 .user-capabilities {
     display: flex;
-    margin-top: 5px;
+    margin-top: 7px;
     margin-left: 18px;
 }
 
@@ -971,54 +978,78 @@ a {
     line-height: 24px;
 }
 
-.service-description-section p {
-    display: block;
-    margin-top: 23px;
-
-    font-size: 13px;
-    font-family: "PT Sans", "Arial", sans-serif;
-    color: black;
-    line-height: 24px;
-}
+/*---------------service-slaider----------------------------------------------------*/
 
 .service-list-container {
     display: flex;
+    position: relative;
 }
 
-.service-list {
+.service-sladers-list {
+    overflow: hidden;
+}
+
+.service-sladers {
+    width: 300%;
+    margin-bottom: 10px;
+}
+
+.service-sladers div {
+    display: block;
+    width: 620px;
+    height: 284px;
+    float: left;
+}
+
+#delivery-button:checked ~ .service-sladers-list .service-sladers {
+    transform: translate(0);
+}
+
+#garantee-button:checked ~ .service-sladers-list .service-sladers {
+    transform: translate(-620px);
+}
+
+#credit-button:checked ~ .service-sladers-list .service-sladers {
+    transform: translate(-1240px);
+}
+
+.service-slader-control {
     position: relative;
     width: 240px;
     margin-right: 80px;
 }
 
-.service-list button {
+.service-slader-control label {
+    display: flex;
+
     font-weight: bold;
-    width: 240px;
-    height: 63px;
     color: white;
     font-size: 21px;
     text-align: start;
-    padding-left: 22px;
 
-    border: none;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-left: 22px;
+    padding-right: 138px;
+
     background-color: #32425c;
     box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #757a81;
 }
 
-.service-list button:hover,
-.service-list button:focus {
+.service-slader-control label:hover,
+.service-slader-control label:focus {
     background-color: #293449;
     outline: none;
 }
 
-.service-list button:active {
+.service-slader-control label:active {
     background-color: white;
     color: #32425c;
     box-shadow: none;
     outline: none;
 }
 
-.service-list::before {
+.service-slader-control::before {
     content: "";
     width: 10px;
     height: 272px;
@@ -1032,16 +1063,11 @@ a {
     background-position: 0 0;
 }
 
-.service-description-section {
-    flex-grow: 1;
-    margin-bottom: 10px;
-}
-
-.service-description-section li {
+.service-sladers div {
     height: 284px;
 }
 
-.service-description-section h3 {
+.service-sladers h3 {
     display: block;
     padding: 0;
     margin: 0;
@@ -1053,15 +1079,20 @@ a {
     letter-spacing: -0.5px;
 }
 
+.service-sladers p {
+    display: block;
+    margin-top: 23px;
+
+    font-size: 13px;
+    font-family: "PT Sans", "Arial", sans-serif;
+    color: black;
+    line-height: 24px;
+}
+
 .delivery,
 .garantee,
 .credit {
     position: relative;
-}
-
-.garantee,
-.credit {
-    display: none;
 }
 
 .delivery::before {
@@ -1112,6 +1143,13 @@ a {
     padding: 12px;
     background-color: #ff5357;
 }
+
+.garantee p,
+.credit p,
+.credit a {
+    margin-left: 2px;
+}
+
 
 /*-------------company-description----main-contacts-------------------------*/
 
@@ -1276,8 +1314,9 @@ a {
     line-height: 30px;
     text-transform: uppercase;
     color:#32425c;
+    letter-spacing: -0.6px;
 
-    padding-left: 30px;
+    padding-left: 28px;
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: #f2f6f8;
@@ -2053,6 +2092,7 @@ fieldset .price-slider {
     position: fixed;
     top: 120px;
     left: 50%;
+    z-index: 30;
 
     width: 460px;
     margin-left: -310px;
@@ -2184,6 +2224,7 @@ fieldset .price-slider {
     position: fixed;
     top: 80px;
     left: 50%;
+    z-index: 30;
 
     width: 940px;
     height: 446px;
@@ -2256,7 +2297,11 @@ fieldset .price-slider {
 }
 
 .modal-buttons button:hover,
-.modal-buttons button:focus,
+.modal-buttons button:focus {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
 .modal-buttons button:active {
-    color: white;
+    border: 1px solid rgba(238,54,67,1);
 }

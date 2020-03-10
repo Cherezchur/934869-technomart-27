@@ -32,7 +32,7 @@
         <div class="average-header-container">
           <div class="container">
             <div class="main-information">
-              <p class="site-description">Интернет-магазин<br>строительных материалов<br>и инструментов для ремонта</p>
+              <p class="site-description">Интернет-магазин<br>строительных материалов<br>и инструментов для ремонта </p>
               <div class="header-contacts">
                 <a class="button-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
                 <p class="header-adres">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
@@ -225,43 +225,42 @@
             <p>Хороший интернет-магазин отличается от плохого не только ценами!
               Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
           </article>
-
+  
           <div class="service-list-container">
-            <ul class="list-item service-list">
-              <li>
-                <button class="active" type="button">Доставка</button>
-              </li>
-              <li>
-                <button type="button">Гарантия</button>
-              </li>
-              <li>
-                <button type="button">Кредит</button>
-              </li>
-            </ul>
-
-            <ul class="list-item service-description-section">
-              <li class="delivery">
-                <h3>Доставка</h3>
-                <p>Мы с удовольствием доставим ваш товар прямо<br>
-                    к вашему подъезду совершенно бесплатно!<br>
-                    Ведь мы неплохо заработаем,<br>
-                    поднимая его на ваш этаж!</p>
-              </li>
-              <li class="garantee">
-                <h3>Гарантия</h3>
-                <p>Если купленный у нас товар поломается или заискрит,<br>
-                    а также в случае пожара, спровоцированного его возгоранием,<br>
-                    вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
-                    сгоревший товар на новый.<br>
-                    Дом уж восстановите как-нибудь сами.</p>
-              </li>
-              <li class="credit">
-                <h3>Кредит</h3>
-                <p>Залезть в долговую яму стало проще!<br>
-                  Кредитные консультанты придут вам на помощь.</p>
-                <a class="button" href="#">Отправить заявку</a>
-              </li>
-            </ul>
+            <input class="visually-hidden" type="radio" id="delivery-button" name="toggle">
+            <input class="visually-hidden" type="radio" id="garantee-button" name="toggle">
+            <input class="visually-hidden" type="radio" id="credit-button" name="toggle">
+            <div class="service-slader-control">
+              <label for="delivery-button" type="radio">Доставка</label>
+              <label for="garantee-button" type="radio">Гарантии</label>
+              <label for="credit-button" type="radio">Кредит</label>
+            </div>
+  
+            <div class="service-sladers-list">
+              <div class="service-sladers">
+                <div class="delivery">
+                  <h3>Доставка</h3>
+                  <p>Мы с удовольствием доставим ваш товар прямо<br>
+                      к вашему подъезду совершенно бесплатно!<br>
+                      Ведь мы неплохо заработаем,<br>
+                      поднимая его на ваш этаж!</p>
+                </div>
+                <div class="garantee">
+                  <h3>Гарантия</h3>
+                  <p>Если купленный у нас товар поломается или заискрит,<br>
+                      а также в случае пожара, спровоцированного его возгоранием,<br>
+                      вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
+                      сгоревший товар на новый.<br>
+                      Дом уж восстановите как-нибудь сами.</p>
+                </div>
+                <div class="credit">
+                  <h3>Кредит</h3>
+                  <p>Залезть в долговую яму стало проще!<br>
+                    Кредитные консультанты придут вам на помощь.</p>
+                  <a class="button" href="#">Отправить заявку</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

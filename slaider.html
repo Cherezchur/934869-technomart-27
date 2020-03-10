@@ -9,36 +9,50 @@
   </head>
 
   <body>
-      <section class="slaider-section">
-          <div class="slaider">
-              <input class="visually-hidden" type="radio" id="btn-1" name="toggle">
-              <input class="visually-hidden" type="radio" id="btn-2" name="toggle" checked>  
-              <div class="slaider-inner">
-                  <div class="slaider-slaiders">
-                    <div class="slaider-drel">
-                        <div class="slaider-description">
-                            <h3>Дрели</h3>
-                            <p>Соседям на радость!</p>
-                        </div>
-                        <img src="img/slaider-drel.jpg" width="620" height="266" alt="Рабочий сверлит стену аккумуляторной дрелью бош">
-                    </div>
-                    <div class="slaider-perforator">
-                        <div class="slaider-description">
-                            <h3>Перфораторы</h3>
-                            <p>Настоящие мужские игрушки</p>
-                        </div>
-                        <img src="img/slaider-perforators.jpg" width="620" height="266" alt="Рабочий сверлит стену электрическим перфоратором бош">
-                    </div>
-                  </div>
-              </div>
-              <div class="slaider-control">
-                <label for="btn-1"></label>
-                <label for="btn-2"></label>
-              </div>
-              <div class="arrow-slider">
-                <label for="btn-1"></label>
-                <label for="btn-2"></label>  
-              </div>
-              <a class="slaider-button button button-open-catalog" href="inner.html">Открыть каталог</a>
+    <section class="main-service-section">
+      <div class="container">
+        <article class="support-title">
+          <h2>Сервисы</h2>
+          <p>Хороший интернет-магазин отличается от плохого не только ценами!
+            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+        </article>
+
+        <div class="service-list-container">
+          <input type="radio" id="delivery-button" name="toggle" checked>
+          <input type="radio" id="garantee-button" name="toggle">
+          <input type="radio" id="credit-button" name="toggle">
+          <div class="service-slader-control">
+            <label for="delivery-button" type="radio">Доставка</label>
+            <label for="garantee-button" type="radio">Гарантии</label>
+            <label for="credit-button" type="radio">Кредит</label>
           </div>
-      </section> 
+
+          <div class="service-sladers-list">
+            <div class="service-sladers">
+              <div class="delivery">
+                <h3>Доставка</h3>
+                <p>Мы с удовольствием доставим ваш товар прямо<br>
+                    к вашему подъезду совершенно бесплатно!<br>
+                    Ведь мы неплохо заработаем,<br>
+                    поднимая его на ваш этаж!</p>
+              </div>
+              <div class="garantee">
+                <h3>Гарантия</h3>
+                <p>Если купленный у нас товар поломается или заискрит,<br>
+                    а также в случае пожара, спровоцированного его возгоранием,<br>
+                    вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
+                    сгоревший товар на новый.<br>
+                    Дом уж восстановите как-нибудь сами.</p>
+              </div>
+              <div class="credit">
+                <h3>Кредит</h3>
+                <p>Залезть в долговую яму стало проще!<br>
+                  Кредитные консультанты придут вам на помощь.</p>
+                <a class="button" href="#">Отправить заявку</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
