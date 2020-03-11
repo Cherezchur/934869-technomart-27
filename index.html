@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|Open+Sans:400,700|PT+Sans:400,400i,700&display=swap&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,400i,700&display=swap&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -227,13 +227,13 @@
           </article>
   
           <div class="service-list-container">
-            <input class="visually-hidden" type="radio" id="delivery-button" name="toggle">
-            <input class="visually-hidden" type="radio" id="garantee-button" name="toggle">
-            <input class="visually-hidden" type="radio" id="credit-button" name="toggle">
+            <input class="visually-hidden" type="radio" id="delivery" name="toggle">
+            <input class="visually-hidden" type="radio" id="garantee" name="toggle">
+            <input class="visually-hidden" type="radio" id="credit" name="toggle">
             <div class="service-slader-control">
-              <label for="delivery-button" type="radio">Доставка</label>
-              <label for="garantee-button" type="radio">Гарантии</label>
-              <label for="credit-button" type="radio">Кредит</label>
+              <label for="delivery">Доставка</label>
+              <label for="garantee">Гарантии</label>
+              <label for="credit">Кредит</label>
             </div>
   
             <div class="service-sladers-list">
@@ -352,14 +352,6 @@
       </div>
     </footer>
 
-    <section class="big-map">
-      <h2 class="visually-hidden">Как до нас добраться</h2>
-      <img src="img/big-map.png" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
-      <button class="modal-close" type="button">
-        <span class="visually-hidden">закрыть</span>
-      </button>
-    </section>
-
     <section class="user-form">
       <h2 class="visually-hidden">Заблудились? Напишите нам!</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
@@ -379,6 +371,14 @@
           <button class="button" type="submit">Отправить</button>
         </div>
       </form>
+      <button class="modal-close" type="button">
+        <span class="visually-hidden">закрыть</span>
+      </button>
+    </section>
+
+    <section class="big-map">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <img src="img/big-map.png" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
       <button class="modal-close" type="button">
         <span class="visually-hidden">закрыть</span>
       </button>

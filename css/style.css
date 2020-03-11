@@ -1001,15 +1001,15 @@ a {
     float: left;
 }
 
-#delivery-button:checked ~ .service-sladers-list .service-sladers {
+#delivery:checked ~ .service-sladers-list .service-sladers {
     transform: translate(0);
 }
 
-#garantee-button:checked ~ .service-sladers-list .service-sladers {
+#garantee:checked ~ .service-sladers-list .service-sladers {
     transform: translate(-620px);
 }
 
-#credit-button:checked ~ .service-sladers-list .service-sladers {
+#credit:checked ~ .service-sladers-list .service-sladers {
     transform: translate(-1240px);
 }
 
@@ -1024,25 +1024,27 @@ a {
 
     font-weight: bold;
     color: white;
+    width: 218px;
     font-size: 21px;
     text-align: start;
 
     padding-top: 19px;
     padding-bottom: 19px;
     padding-left: 22px;
-    padding-right: 138px;
+    margin-bottom: 1px;
 
     background-color: #32425c;
+    border: none;
     box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #757a81;
 }
 
-.service-slader-control label:hover,
-.service-slader-control label:focus {
+.service-slader-control label:hover {
     background-color: #293449;
     outline: none;
 }
 
-.service-slader-control label:active {
+.service-slader-control label:active,
+.service-slader-control label:focus {
     background-color: white;
     color: #32425c;
     box-shadow: none;
@@ -1356,28 +1358,36 @@ a {
 }
 
 .catalog-sort {
-    flex-grow: 1;
-    margin-left: 20px;
     display: flex;
     justify-content: space-between;
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.catalog-sort h2 {
+    width: 220px;
 }
 
 .list-sort {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    width: 354px;
+    padding-right: 46px;
 
     padding-bottom: 3px;
-    margin-left: 10px;
+    /* margin-left: 25px; */
 }
 
 .list-sort a {
-    margin-left: 75px;
+    /* margin-left: 75px; */
 
-    font-size: 14px;
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 13px;
     line-height: 18px;
     text-transform: uppercase;
     color: rgba(0,0,0,0.5);
+
     border-bottom: 1px dotted #ee3643;
 }
 
@@ -1451,6 +1461,7 @@ a {
 }
 
 .form-filter legend {
+    font-size: 17px;
     font-weight: bold;
     text-transform: uppercase;
     color: #000000;
@@ -1830,8 +1841,10 @@ fieldset .price-slider {
 
 .catalog-button {
     font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 13px;
     color: black;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
 }
 
 .catalog-button:hover,
@@ -2112,6 +2125,7 @@ fieldset .price-slider {
     position: absolute;
     top: 9px;
     right: 9px;
+    z-index: 40;
 
     width: 21px;
     height: 21px;
@@ -2132,7 +2146,6 @@ fieldset .price-slider {
     position: absolute;
     top: -2px;
     left: 9px;
-
 
     background-color: #ff5357;
 }
