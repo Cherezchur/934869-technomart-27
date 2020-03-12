@@ -1,3 +1,70 @@
+/* cuprum-regular - latin_cyrillic */
+@font-face {
+    font-family: 'Cuprum';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/cuprum-v11-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
+    src: local('Cuprum Regular'), local('Cuprum-Regular'),
+         url('../fonts/cuprum-v11-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/cuprum-v11-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/cuprum-v11-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/cuprum-v11-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/cuprum-v11-latin_cyrillic-regular.svg#Cuprum') format('svg'); /* Legacy iOS */
+}
+  /* cuprum-italic - latin_cyrillic */
+@font-face {
+    font-family: 'Cuprum';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/cuprum-v11-latin_cyrillic-italic.eot'); /* IE9 Compat Modes */
+    src: local('Cuprum Italic'), local('Cuprum-Italic'),
+         url('../fonts/cuprum-v11-latin_cyrillic-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/cuprum-v11-latin_cyrillic-italic.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/cuprum-v11-latin_cyrillic-italic.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/cuprum-v11-latin_cyrillic-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/cuprum-v11-latin_cyrillic-italic.svg#Cuprum') format('svg'); /* Legacy iOS */
+}
+  /* cuprum-700 - latin_cyrillic */
+@font-face {
+    font-family: 'Cuprum';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/cuprum-v11-latin_cyrillic-700.eot'); /* IE9 Compat Modes */
+    src: local('Cuprum Bold'), local('Cuprum-Bold'),
+         url('../fonts/cuprum-v11-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/cuprum-v11-latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/cuprum-v11-latin_cyrillic-700.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/cuprum-v11-latin_cyrillic-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/cuprum-v11-latin_cyrillic-700.svg#Cuprum') format('svg'); /* Legacy iOS */
+}
+
+  /* pt-sans-regular - latin_cyrillic */
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/pt-sans-v11-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
+    src: local('PT Sans'), local('PTSans-Regular'),
+         url('../fonts/pt-sans-v11-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/pt-sans-v11-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/pt-sans-v11-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/pt-sans-v11-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/pt-sans-v11-latin_cyrillic-regular.svg#PTSans') format('svg'); /* Legacy iOS */
+}
+  /* pt-sans-700 - latin_cyrillic */
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/pt-sans-v11-latin_cyrillic-700.eot'); /* IE9 Compat Modes */
+    src: local('PT Sans Bold'), local('PTSans-Bold'),
+         url('../fonts/pt-sans-v11-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/pt-sans-v11-latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/pt-sans-v11-latin_cyrillic-700.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/pt-sans-v11-latin_cyrillic-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/pt-sans-v11-latin_cyrillic-700.svg#PTSans') format('svg'); /* Legacy iOS */
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -983,48 +1050,42 @@ a {
 .service-list-container {
     display: flex;
     position: relative;
-}
-
-.service-sladers-list {
-    overflow: hidden;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .service-sladers {
-    width: 300%;
+    margin: 0;
     margin-bottom: 10px;
 }
 
-.service-sladers div {
-    display: block;
+.service-sladers li {
     width: 620px;
     height: 284px;
-    float: left;
 }
 
-#delivery:checked ~ .service-sladers-list .service-sladers {
-    transform: translate(0);
+.delivery,
+.garantee,
+.credit {
+    position: relative;
+    display: none;
 }
 
-#garantee:checked ~ .service-sladers-list .service-sladers {
-    transform: translate(-620px);
-}
-
-#credit:checked ~ .service-sladers-list .service-sladers {
-    transform: translate(-1240px);
+.item-active {
+    display: block;
 }
 
 .service-slader-control {
     position: relative;
     width: 240px;
-    margin-right: 80px;
 }
 
-.service-slader-control label {
+.service-slader-control button {
     display: flex;
 
     font-weight: bold;
     color: white;
-    width: 218px;
+    width: 240px;
     font-size: 21px;
     text-align: start;
 
@@ -1038,13 +1099,13 @@ a {
     box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #757a81;
 }
 
-.service-slader-control label:hover {
+.service-slader-control button:hover {
     background-color: #293449;
     outline: none;
 }
 
-.service-slader-control label:active,
-.service-slader-control label:focus {
+.service-slader-control button:active,
+.service-slader-control button:focus {
     background-color: white;
     color: #32425c;
     box-shadow: none;
@@ -1065,7 +1126,7 @@ a {
     background-position: 0 0;
 }
 
-.service-sladers div {
+.service-sladers li {
     height: 284px;
 }
 
@@ -1089,12 +1150,6 @@ a {
     font-family: "PT Sans", "Arial", sans-serif;
     color: black;
     line-height: 24px;
-}
-
-.delivery,
-.garantee,
-.credit {
-    position: relative;
 }
 
 .delivery::before {
@@ -1265,6 +1320,8 @@ a {
 .breadcrumbs a {
     position: relative;
     padding-right: 40px;
+
+    letter-spacing: 0.2px;
 }
 
 .breadcrumbs .home {
@@ -1275,11 +1332,11 @@ a {
 
 .breadcrumbs .home::after {
     content: "";
-    width: 14px;
+    width: 15px;
     height: 12px;
 
     position: absolute;
-    top: 2px;
+    top: 0;
     left: -2px;
 
     background-image: url(img/icon-home.svg);
@@ -1287,26 +1344,18 @@ a {
     background-position: 0 0;
 }
 
-.breadcrumbs .breadcrumbs-item::after,
-.breadcrumbs .breadcrumbs-item::before {
+.breadcrumbs .breadcrumbs-item::after {
     content: "";
-    width: 2px;
-    height: 9px;
+    width: 8px;
+    height: 12px;
 
     position: absolute;
-    left: -21px;
-    top: 8px;
+    left: -25px;
+    top: 0;
 
-    background-color: #cfd3d9;
-}
-
-.breadcrumbs .breadcrumbs-item::after {
-    transform: rotate(45deg);
-}
-
-.breadcrumbs .breadcrumbs-item::before {
-    transform: rotate(-45deg);
-    top: 2px;
+    background-image: url(img/icon-right-small.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
 /*-----------------------catalog-title---sort-filters---------------*/
@@ -1337,6 +1386,24 @@ a {
 .price-values textarea {
     background-color: #f7f3ec;
     border-radius: 3px;
+}
+
+.price-values {
+    position: relative;
+
+    font-size: 17px;
+}
+
+.price-values:after {
+    content: "";
+    width: 10px;
+    height: 1px;
+
+    position: absolute;
+    top: 19px;
+    left: 105px;
+
+    background-color: black;
 }
 
 .filter,
@@ -1435,13 +1502,13 @@ a {
     display: flex;
     margin-bottom: 70px;
 }
-
 .price-values {
     width: 95px;
 }
 
 .form-filter fieldset {
     display: flex;
+    flex-direction: column;
     width: 220px;
     padding: 0;
     margin: 0;
@@ -1530,54 +1597,14 @@ fieldset .price-slider {
 
 .brend-list li,
 .power-group li {
+    position: relative;
     padding-left: 33px;
     padding-bottom: 20px;
 }
 
-.brend-list input[tupe="checkbox"] {
-    opacity: 0.5;
-}
-
 .brend-list input {
     position: relative;
-}
-
-.brend-list input:checked::after {
-    content: "";
-    width: 26px;
-    height: 23px;
-
-    position: absolute;
-    left: -33px;
-    top: -16px;
-
-    background-image: url(img/checkbox-on.svg);
-    background-repeat: no-repeat;
-    background-position: 0 0;
-}
-
-.brend-list input::after {
-    content: "";
-    width: 23px;
-    height: 23px;
-
-    position: absolute;
-    left: -33px;
-    top: -16px;
-
-    background-image: url(img/checkbox-off.svg);
-    background-repeat: no-repeat;
-    background-position: 0 0;
-}
-
-.brend-list input[type="checkbox"]::after,
-.brend-list input[type="checkbox"]:checked::after {
-    opacity: 0.3;
-}
-
-.brend-list input[type="checkbox"]:hover::after,
-.brend-list input[type="checkbox"]:focus::after {
-    opacity: 0.5;
+    display: none;
 }
 
 .brend-list input[type="checkbox"]:disabled::after {
@@ -1588,6 +1615,50 @@ fieldset .price-slider {
     color: #000000;
 
     opacity: 0.1;
+}
+
+.brend-list label::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    background-image: url(img/checkbox-off.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.3;
+}
+
+.brend-list label::after  {
+    display: none;
+    content: "";
+    width: 26px;
+    height: 23px;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    background-image: url(img/checkbox-on.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.3;
+}
+
+input[type="checkbox"]:checked ~ label::after {
+    display: block;
+}
+
+input[type="checkbox"]:checked ~ label::before {
+    display: none;
+}
+
+input[type="checkbox"]:hover ~ label::after,
+input[type="checkbox"]:focus ~ label::before {
+    opacity: 0.5;
 }
 
 .power-group-list input[type="radio"] {
@@ -1634,7 +1705,7 @@ fieldset .price-slider {
     border: 1px solid #eaeaea;
 
     margin-top: 58px;
-    padding: 8px 36px;
+    padding: 10px 38px;
 }
 
 
@@ -1824,18 +1895,15 @@ fieldset .price-slider {
 
 .list-catalog-button a {
     padding: 10px 15px;
-    margin-right: 10px;
+    margin-right: 9px;
 
     border-radius: 3px;
 }
 
 .list-catalog-button .next-button {
-    padding-top: 8px;
-    padding-bottom: 9px;
-    padding-left: 31px;
-    padding-right: 31px;
+    padding: 10px 32px;
 
-    font-size: 15px;
+    font-size: 13px;
     text-size-adjust: 110%;
 }
 
