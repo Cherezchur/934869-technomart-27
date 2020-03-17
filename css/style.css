@@ -2239,6 +2239,20 @@ input[type="radio"]:focus ~ label::before {
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
 }
 
+.cart-form-modal {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    z-index: 30;
+
+    width: 940px;
+    height: 446px;
+    margin-left: -470px;
+    padding: 0;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+}
+
 .modal-map p {
     position: absolute;
     top: 0;
@@ -2248,12 +2262,12 @@ input[type="radio"]:focus ~ label::before {
     margin: 0;
   }
   
-  .modal-map iframe {
+.modal-map iframe {
     position: relative;
     z-index: 2;
   
     border: none;
-  }
+}
 
 @keyframes shake {
     0%,

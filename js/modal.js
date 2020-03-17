@@ -17,8 +17,8 @@
 
       var cartLink = document.querySelectorAll(".button-buy");
       var cartPopup = document.querySelector(".cart-form-modal");
-      var cartClose = cartPopup.querySelector(".modal-close");
-      
+      var cartClose = document.querySelector(".cart-modal-close");
+
       try {
         storage = localStorage.getItem("login");
       } catch (err) {
@@ -80,7 +80,7 @@
         evt.preventDefault();
         cartPopup.classList.add("modal-show");
         });
-  
+
       cartClose.addEventListener("click", function (evt) {
         evt.preventDefault();
         mapPopup.classList.remove("modal-show");
