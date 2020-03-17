@@ -555,7 +555,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
-    margin-bottom: 62px;
+    margin-bottom: 60px;
     padding-top: 20px;
 
     justify-content: space-between;
@@ -1254,7 +1254,7 @@ a {
 .main-contacts p {
     font-family: "PT Sans", "Arial", sans-serif;
     line-height: 24px;
-    letter-spacing: 0.11px;
+    letter-spacing: 0.14px;
 }
 
 .company-description .slogan {
@@ -1282,6 +1282,7 @@ a {
     font-size: 18px;
     font-weight: bold;
     line-height: 20px;
+    letter-spacing: -0.5px;
 }
 
 .list-carriers li::after {
@@ -1300,8 +1301,8 @@ a {
     display: inline-block;
     width: 220px;
 
-    padding-top: 9px;
-    padding-bottom: 6px;
+    padding-top: 10px;
+    padding-bottom: 7px;
 
 }
 
@@ -1814,28 +1815,32 @@ input[type="radio"]:focus ~ label::before {
 
 .catalog-item .actions {
     position: absolute;
-    top: 0;
+    top: 5px;
     left: 0;
 
     width: 218px;
     height: 88px;
     padding: 40px 0;
 
+    letter-spacing: normal;
+
     background-color: rgba(255, 255, 255, 0.9);
     z-index: 10;
 }
 
-.actions .button-buy,
-.actions .button-bookmark {
+.actions .button-buy {
+    position: relative;
     display: block;
-    width: 129px;
+    width: 41px;
     margin: 0 auto;
     margin-bottom: 7px;
-    padding: 7px 0;
+    padding-top: 11px;
+    padding-bottom: 5px;
+    padding-left: 49px;
+    padding-right: 45px;
 
     background-color: #63a63e;
-    border: 3px solid #63a63e;
-    border-bottom-color: #367315;
+    border-bottom: 3px solid #367315;
     border-radius: 3px;
 
     color: white;
@@ -1848,9 +1853,64 @@ input[type="radio"]:focus ~ label::before {
 }
 
 .actions .button-bookmark {
+    position: relative;
+    display: block;
+    width: 129px;
+    margin: 0 auto;
+    margin-bottom: 7px;
+    padding: 7px 0;
+
+    border: 3px solid #63a63e;
+    border-radius: 3px;
+
+    color: white;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: "Cuprum", sans-serif;
+    line-height: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
     color: #32425c;
-    background: white;
-    border-bottom-color: #63a63e;
+}
+
+.actions .button-buy::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+
+    position: absolute;
+    top: 10px;
+    left: 13px;
+
+    background-image: url(img/cart-icon.svg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+}
+
+.actions .button-buy:hover,
+.actions .button-buy:focus {
+    background-color: #5fbb2d;
+}
+
+.actions .button-buy:hover:after,
+.actions .button-buy:focus:after {
+    opacity: 1;
+}
+
+.actions .button-buy:active,
+.actions .button-buy:active:after {
+    background-color: #518534;
+    border-color: #518534;
+}
+
+.actions .button-bookmark:hover,
+.actions .button-bookmark:focus {
+    border-color: #32425c;
+}
+
+.actions .button-bookmark:active {
+    opacity: 0.5;
 }
 
 .catalog-item .actions {
@@ -1980,6 +2040,7 @@ input[type="radio"]:focus ~ label::before {
 
     font-size: 30px;
     line-height: 30px;
+    letter-spacing: 0.13px;
     font-weight: normal;
     text-transform: uppercase;
     color:#32425c;
@@ -1989,6 +2050,7 @@ input[type="radio"]:focus ~ label::before {
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 13px;
     line-height: 20px;
+    letter-spacing: 0.05px;
     color: black;
 
     margin: 0;
@@ -2027,7 +2089,8 @@ input[type="radio"]:focus ~ label::before {
 }
 
 .footer-adres {
-    max-width: 323px;
+    max-width: 330px;
+    letter-spacing: 0.1px;
 }
 
 
