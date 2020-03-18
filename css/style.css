@@ -3,39 +3,27 @@
     font-family: 'Cuprum';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/cuprum-v11-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
     src: local('Cuprum Regular'), local('Cuprum-Regular'),
-         url('../fonts/cuprum-v11-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
          url('../fonts/cuprum-v11-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../fonts/cuprum-v11-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
-         url('../fonts/cuprum-v11-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('../fonts/cuprum-v11-latin_cyrillic-regular.svg#Cuprum') format('svg'); /* Legacy iOS */
+         url('../fonts/cuprum-v11-latin_cyrillic-regular.woff') format('woff'); /* Modern Browsers */
 }
   /* cuprum-italic - latin_cyrillic */
 @font-face {
     font-family: 'Cuprum';
     font-style: italic;
     font-weight: 400;
-    src: url('../fonts/cuprum-v11-latin_cyrillic-italic.eot'); /* IE9 Compat Modes */
     src: local('Cuprum Italic'), local('Cuprum-Italic'),
-         url('../fonts/cuprum-v11-latin_cyrillic-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
          url('../fonts/cuprum-v11-latin_cyrillic-italic.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../fonts/cuprum-v11-latin_cyrillic-italic.woff') format('woff'), /* Modern Browsers */
-         url('../fonts/cuprum-v11-latin_cyrillic-italic.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('../fonts/cuprum-v11-latin_cyrillic-italic.svg#Cuprum') format('svg'); /* Legacy iOS */
+         url('../fonts/cuprum-v11-latin_cyrillic-italic.woff') format('woff'); /* Modern Browsers */
 }
   /* cuprum-700 - latin_cyrillic */
 @font-face {
     font-family: 'Cuprum';
     font-style: normal;
     font-weight: 700;
-    src: url('../fonts/cuprum-v11-latin_cyrillic-700.eot'); /* IE9 Compat Modes */
     src: local('Cuprum Bold'), local('Cuprum-Bold'),
-         url('../fonts/cuprum-v11-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
          url('../fonts/cuprum-v11-latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../fonts/cuprum-v11-latin_cyrillic-700.woff') format('woff'), /* Modern Browsers */
-         url('../fonts/cuprum-v11-latin_cyrillic-700.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('../fonts/cuprum-v11-latin_cyrillic-700.svg#Cuprum') format('svg'); /* Legacy iOS */
+         url('../fonts/cuprum-v11-latin_cyrillic-700.woff') format('woff'); /* Modern Browsers */
 }
 
   /* pt-sans-regular - latin_cyrillic */
@@ -43,26 +31,18 @@
     font-family: 'PT Sans';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/pt-sans-v11-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
     src: local('PT Sans'), local('PTSans-Regular'),
-         url('../fonts/pt-sans-v11-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
          url('../fonts/pt-sans-v11-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../fonts/pt-sans-v11-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
-         url('../fonts/pt-sans-v11-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('../fonts/pt-sans-v11-latin_cyrillic-regular.svg#PTSans') format('svg'); /* Legacy iOS */
+         url('../fonts/pt-sans-v11-latin_cyrillic-regular.woff') format('woff'); /* Modern Browsers */
 }
   /* pt-sans-700 - latin_cyrillic */
 @font-face {
     font-family: 'PT Sans';
     font-style: normal;
     font-weight: 700;
-    src: url('../fonts/pt-sans-v11-latin_cyrillic-700.eot'); /* IE9 Compat Modes */
     src: local('PT Sans Bold'), local('PTSans-Bold'),
-         url('../fonts/pt-sans-v11-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
          url('../fonts/pt-sans-v11-latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../fonts/pt-sans-v11-latin_cyrillic-700.woff') format('woff'), /* Modern Browsers */
-         url('../fonts/pt-sans-v11-latin_cyrillic-700.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('../fonts/pt-sans-v11-latin_cyrillic-700.svg#PTSans') format('svg'); /* Legacy iOS */
+         url('../fonts/pt-sans-v11-latin_cyrillic-700.woff') format('woff'); /* Modern Browsers */
 }
 
 body {
@@ -113,7 +93,6 @@ a {
 .container {
     width: 940px;
     margin: 0 auto;
-    /*background-color: rgba(0, 0, 0, 0.1);*/
 }
 
 /*--------------header--------------------------------------------------------------------------------*/
@@ -181,6 +160,8 @@ a {
 .cart,
 .place-order {
     position: relative;
+
+    line-height: 18px;
 }
 
 .bookmark {
@@ -194,19 +175,31 @@ a {
 }
 
 .header-navigation-list .search {
-    position: relative;
+    box-sizing: content-box;
     width: 222px;
+    height: 42px;
+
+    padding: 0;
 
     padding-left: 48px;
+
+    border: none;
+    background-color: #293449;
 }
 
-.search svg {
+.header-navigation-list label {
+    position: absolute;
+    left: 267px;
+    top: 12px;
+}
+
+.header-navigation-list svg {
     width: 17px;
     height: 17px;
 
     position: absolute;
-    left: 17px;
-    top: 12px;
+    left: -29px;
+    top: 0;
 
     opacity: 0.5;
 }
@@ -257,8 +250,7 @@ a {
 .bookmark:focus,
 .cart:hover,
 .cart:focus,
-.search:hover,
-.search:focus {
+.search:hover {
     background-color: #212a3a;
 }
 
@@ -266,18 +258,30 @@ a {
     background-color: #ee3643;
 }
 
-.search:hover svg,
-.search:focus svg {
+.search:hover ~ label[for="search"] svg {
     opacity: 1;
 }
 
-.search:active path {
+.search:focus ~ label[for="search"] svg {
+    opacity: 1;
+}
+
+.search:focus ~ label[for="search"] path,
+.search:active ~ label[for="search"] path {
     fill: #ee3643;
 }
 
-.search:active {
+.search:active,
+.search:focus {
     background-color: white;
     color: black;
+}
+
+.search::placeholder {
+    font-family: inherit;
+    color: white;
+    font-size: inherit;
+    opacity: 1;
 }
 
 .bookmark:active,
@@ -339,10 +343,11 @@ a {
     flex-grow: 1;
 }
 
-.site-description {
+.main-information .site-description {
     display: block;
+    max-width: 200px;
+    padding-right: 45px;
     margin: 0;
-
     margin-top: 3px;
 
     font-size: 16px;
@@ -406,6 +411,8 @@ a {
     justify-content: space-between;
 
     padding-left: 19px;
+
+    line-height: 21px;
 }
 
 .user-button {
@@ -424,6 +431,8 @@ a {
     position: relative;
     min-width: 75px;
     padding-left: 46px;
+
+    line-height: 21px;
 }
 
 .enter::before {
@@ -574,6 +583,8 @@ a {
     padding-top: 18px;
     padding-bottom: 17px;
 
+    line-height: 17px;
+
     background-color: #32425c;
     border-bottom: 5px solid #2b374d;
 }
@@ -651,7 +662,7 @@ a {
 
     font-size: 24px;
     font-weight: bold;
-    line-height: 20px;
+    line-height: 30px;
 }
 
 .interactive-section-button {
@@ -666,6 +677,7 @@ a {
 
     text-transform: uppercase;
     font-size: 14px;
+    line-height: 18px;
 
     border-radius: 3px;
 }
@@ -816,15 +828,16 @@ a {
 }
 
 .slaider a {
+    position: absolute;
     top: 206px;
     left: 25px;
+    padding-top: 11px;
 
     width: 195px;
     height: 27px;
 
-    padding-top: 11px;
+    line-height: 18px;
 
-    position: absolute;
     outline: none;
 }
 
@@ -981,6 +994,7 @@ a {
     text-transform: uppercase;
     color:#32425c;
     letter-spacing: -0.9px;
+    line-height: 30px;
 }
 
 .content-title-section button{
@@ -1044,6 +1058,7 @@ a {
 
 .support-title h2 {
     font-size: 30px;
+    line-height: 30px;
     color: black;
     text-transform: uppercase;
     letter-spacing: -1px;
@@ -1098,6 +1113,7 @@ a {
     color: white;
     width: 240px;
     font-size: 21px;
+    line-height: 30px;
     text-align: start;
 
     padding-top: 19px;
@@ -1148,6 +1164,7 @@ a {
     margin-top: -3px;
 
     font-size: 36px;
+    line-height: 36px;
     text-transform: uppercase;
     color: #32425c;
     letter-spacing: -0.5px;
@@ -1212,6 +1229,14 @@ a {
     background-color: #ff5357;
 }
 
+.delivery p {
+    width: 275px;
+}
+
+.garantee p {
+    width: 377px;
+}
+
 .garantee p,
 .credit p,
 .credit a {
@@ -1255,6 +1280,10 @@ a {
     font-family: "PT Sans", "Arial", sans-serif;
     line-height: 24px;
     letter-spacing: 0.14px;
+}
+
+.main-contacts p {
+    width: 185px;
 }
 
 .company-description .slogan {
@@ -1430,6 +1459,8 @@ a {
     font-size: 13px;
     color: black;
     text-transform: uppercase;
+    line-height: 18px;
+    font-weight: 400;
 }
 
 .filters-title-container .filter {
@@ -1455,12 +1486,9 @@ a {
     padding-right: 46px;
 
     padding-bottom: 3px;
-    /* margin-left: 25px; */
 }
 
 .list-sort a {
-    /* margin-left: 75px; */
-
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 18px;
@@ -1542,6 +1570,7 @@ a {
 .form-filter legend {
     font-size: 17px;
     font-weight: bold;
+    line-height: 30px;
     text-transform: uppercase;
     color: #000000;
 }
@@ -1576,6 +1605,7 @@ fieldset .price-slider {
     text-align: center;
     padding: 0;
     padding-top: 10px;
+    line-height: 18px;
 }
 
 .price-values textarea:first-child {
@@ -1768,7 +1798,6 @@ input[type="radio"]:focus ~ label::before {
     font-size: 18px;
     line-height: 20px;
     font-weight: bold;
-    letter-spacing: 1px;
     text-align: center;
     color: black;
 
@@ -1846,7 +1875,7 @@ input[type="radio"]:focus ~ label::before {
     color: white;
     font-size: 14px;
     font-weight: normal;
-    font-family: "Cuprum", sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     line-height: 18px;
     text-decoration: none;
     text-transform: uppercase;
@@ -1866,7 +1895,7 @@ input[type="radio"]:focus ~ label::before {
     color: white;
     font-size: 14px;
     font-weight: normal;
-    font-family: "Cuprum", sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     line-height: 18px;
     text-decoration: none;
     text-transform: uppercase;
@@ -1931,6 +1960,7 @@ input[type="radio"]:focus ~ label::before {
     padding: 0 25px;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 18px;
 }
 
 .catalog-item .discount {
@@ -1940,6 +1970,8 @@ input[type="radio"]:focus ~ label::before {
 
     color: #999;
     text-decoration: line-through;
+    font-size: 17px;
+    line-height: 18px;
 }
 
 .catalog-item .price {
@@ -1952,6 +1984,9 @@ input[type="radio"]:focus ~ label::before {
     padding: 9px 31px;
 
     color: white;
+    font-size: 17px;
+    line-height: 18px;
+
     background: #ee3643;
     border-radius: 3px;
 }
@@ -2006,6 +2041,7 @@ input[type="radio"]:focus ~ label::before {
 .catalog-button {
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
+    line-height: 18px;
     color: black;
     border: 1px solid rgba(0, 0, 0, 0.1);
     text-transform: uppercase;
@@ -2049,7 +2085,7 @@ input[type="radio"]:focus ~ label::before {
 .perforator-description p {
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 13px;
-    line-height: 20px;
+    line-height: 24px;
     letter-spacing: 0.05px;
     color: black;
 
@@ -2090,6 +2126,10 @@ input[type="radio"]:focus ~ label::before {
 
 .footer-adres {
     max-width: 330px;
+}
+
+.footer-adres p {
+    line-height: 24px;
     letter-spacing: 0.1px;
 }
 
@@ -2109,6 +2149,8 @@ input[type="radio"]:focus ~ label::before {
     justify-content: space-between;
     align-items: center;
     margin-right: 15px;
+
+    line-height: 18px;
 }
 
 .navigation-service-list {
@@ -2118,6 +2160,11 @@ input[type="radio"]:focus ~ label::before {
     align-items: flex-end;
 
     padding-bottom: 9px;
+}
+
+.navigation-service-list a {
+    font-style: 18px;
+    line-height: 24px;
 }
 
 .navigation-service-list a,
@@ -2138,6 +2185,11 @@ input[type="radio"]:focus ~ label::before {
     justify-content: space-between;
     width: 524px;
     margin-top: 5px;
+}
+
+.navigation-product-list a {
+    font-size: 18px;
+    line-height: 24px;
 }
 
 .navigation-product-list a,
@@ -2174,6 +2226,7 @@ input[type="radio"]:focus ~ label::before {
 
 .footer-company-copyright {
     margin-top: 22px;
+    width: 230px;
 }
 
 .social-list {
@@ -2303,7 +2356,7 @@ input[type="radio"]:focus ~ label::before {
 }
 
 .cart-form-modal {
-    display: none;
+    /* display: none; */
     position: fixed;
     top: 80px;
     left: 50%;
@@ -2428,6 +2481,11 @@ input[type="radio"]:focus ~ label::before {
     margin-top: 25px;
 }
 
+.user-form input,
+.user-form textarea {
+    line-height: 18px;
+}
+
 .user-form label {
     display: block;
     padding-bottom: 11px;
@@ -2510,6 +2568,11 @@ input[type="radio"]:focus ~ label::before {
 
     margin: 66px 0;
     padding-left: 96px;
+
+    color: black;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: normal;
 }
 
 .cart-form h2:after {
@@ -2533,6 +2596,8 @@ input[type="radio"]:focus ~ label::before {
 
     margin-left: -80px;
     margin-right: -80px;
+
+    line-height: 18px;
 }
 
 .modal-buttons a,
