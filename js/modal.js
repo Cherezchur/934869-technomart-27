@@ -15,10 +15,6 @@
       var mapPopup = document.querySelector(".modal-map");
       var mapClose = mapPopup.querySelector(".modal-close");
 
-      var cartLink = document.querySelectorAll(".button-buy");
-      var cartPopup = document.querySelector(".cart-form-modal");
-      var cartClose = document.querySelector(".cart-modal-close");
-
       try {
         storage = localStorage.getItem("login");
       } catch (err) {
@@ -72,16 +68,6 @@
         });
 
       mapClose.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        mapPopup.classList.remove("modal-show");
-        });
-
-      cartLink.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        cartPopup.classList.add("modal-show");
-        });
-
-      cartClose.addEventListener("click", function (evt) {
         evt.preventDefault();
         mapPopup.classList.remove("modal-show");
         });
