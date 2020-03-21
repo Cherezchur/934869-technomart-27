@@ -178,13 +178,14 @@ a {
 }
 
 .header-navigation-list .search {
-    box-sizing: content-box;
     width: 222px;
     height: 42px;
 
     padding: 0;
-
     padding-left: 48px;
+
+    line-height: 18px;
+    color: white;
 
     border: none;
     background-color: #293449;
@@ -473,6 +474,8 @@ a {
 .user-name-button {
     width: 253px;
     padding-left: 47px;
+
+    line-height: 21px;
 }
 
 .user-name-button::before {
@@ -525,8 +528,10 @@ a {
 
 .user-capabilities {
     display: flex;
-    margin-top: 3px;
+    margin-top: 7px;
     margin-left: 18px;
+
+    line-height: 18px;
 }
 
 .orders-link {
@@ -668,7 +673,7 @@ a {
 
 .interactive-section-button {
     display: block;
-    width: 135;
+    width: 135px;
     height: 13px;
 
     text-align: center;
@@ -1003,8 +1008,9 @@ a {
     margin-right: 24px;
     width: 253px;
     height: 28px;
-
     padding-top: 10px;
+
+    line-height: 18px;
 }
 
 .list-popular-product .catalog-item:nth-child(4n) {
@@ -1240,6 +1246,8 @@ a {
     width: 172px;
     padding: 11px;
     background-color: #ff5357;
+
+    line-height: 18px;
 }
 
 .delivery p {
@@ -2100,7 +2108,7 @@ a {
     display: flex;
 
     margin-top: 44px;
-    font-style: "Cuprum", "Arial", sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 13px;
     line-height: 18px;
 }
@@ -2164,7 +2172,7 @@ a {
 }
 
 .perforator-description p {
-    font-family: "PT Sans", Arial, sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 24px;
     letter-spacing: 0.1px;
@@ -2249,7 +2257,7 @@ a {
 }
 
 .navigation-service-list a {
-    font-style: 18px;
+    font-size: 18px;
     line-height: 24px;
 }
 
