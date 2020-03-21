@@ -11,7 +11,11 @@
     <header class="main-header">
       <nav class="header-navigation">
         <ul class="list-item header-navigation-list container">
-          <li><a class="logo header-logo" href="#"><img src="img/logo-technomart.svg" width="109" height="19" alt="Логотип интернет-магазина Техномарт"></a></li>
+          <li>
+            <a class="logo header-logo">
+              <img src="img/logo-technomart.svg" width="109" height="19" alt="Логотип интернет-магазина Техномарт">
+            </a>
+          </li>
           <li>
             <input  class="search" type="search" name="search" placeholder="Поиск:">
             <label for="search">
@@ -131,7 +135,7 @@
       <section class="popular-product container">
         <div class="content-title-section">
           <h2>Популярные товары:</h2>
-          <button class="button" type="button">Все популярные товары</button>
+          <a class="button">Все популярные товары</a>
         </div>
 
         <ul class="list-item list-popular-product">
@@ -185,7 +189,7 @@
       <section class="popular-brands container">
         <div class="content-title-section">
           <h2>Популярные производители:</h2>
-          <button class="button" type="button">Все производители</button>
+          <a class="button">Все производители</a>
         </div>
 
         <ul class="list-item list-popular-brands">
@@ -233,7 +237,7 @@
 
             <div class="service-sladers-list">
               <ul class="service-sladers">
-                <li class="delivery item-active">
+                <li class="delivery">
                   <h3>Доставка</h3>
                   <p>Мы с удовольствием доставим ваш товар прямо<br>
                       к вашему подъезду совершенно бесплатно!
@@ -248,7 +252,7 @@
                       сгоревший товар на новый.<br>
                       Дом уж восстановите как-нибудь сами.</p>
                 </li>
-                <li class="credit">
+                <li class="credit item-active">
                   <h3>Кредит</h3>
                   <p>Залезть в долговую яму стало проще!<br>
                     Кредитные консультанты придут вам на помощь.</p>
@@ -283,7 +287,7 @@
               <img src="img/map.png" width="300" height="158" alt="Карта проезда">
             </a>
           </div>
-          <button class="contacts-form-button button" type="button">Заблудились? Напишите нам!</button>
+          <a class="contacts-form-button button" type="button">Заблудились? Напишите нам!</a>
         </section>
       </div
     </main>
@@ -292,7 +296,7 @@
       <nav class="footer-navigation-pane">
         <div class="container">
           <div class="footer-navigation-service">
-            <a class="logo footer-logo" href="index.html">
+            <a class="logo footer-logo">
               <img src="img/logo-technomart.svg" width="138" height="23" alt="Интернет-магазина Техномарт">
             </a>
             <ul class="list-item navigation-service-list">
@@ -305,8 +309,8 @@
           </div>
           <div class="footer-navigation-product">
             <div class="footer-adres">
-              <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-              +7 (812) 555-05-55</p>
+              <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+              <a href="tel:+78125550555">+7 (812) 555-05-55</a>
             </div>
             <ul class="list-item navigation-product-list">
               <li><a href="#">Материалы</a></li>
@@ -325,9 +329,21 @@
             </div>
 
             <ul class="list-item social-list">
-              <li><a href="#" class="vkontakte"></a></li>
-              <li><a href="#" class="facebook"></a></li>
-              <li><a href="#" class="instagram"></a></li>
+              <li>
+                <a href="#" class="vkontakte">
+                  <span class="visually-hidden">вконтакте</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="facebook">
+                  <span class="visually-hidden">фейсбук</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="instagram">
+                  <span class="visually-hidden">инстаграмм</span>
+                </a>
+              </li>
             </ul>
 
             <div class="footer-copyright">

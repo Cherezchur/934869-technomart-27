@@ -40,7 +40,9 @@
             </div>
             <div class="user-button-container">
               <a class="user-button user-name-button" href="#">Равшан Джамшутович</a>
-              <a class="deauthorization" href="#"></a>
+              <a class="deauthorization" href="#">
+                <span class="visually-hidden">выйти из личного кабинета</span>
+              </a>
               <ul class="list-item user-capabilities">
                 <li><a class="orders-link" href="#">Мои заказы</a></li>
                 <li><a href="#">Личный кабинет</a></li>
@@ -82,22 +84,35 @@
           <section class="catalog-sort">
             <h2>Сортировка:</h2>
             <ul class="list-item list-sort">
-              <li><a href="#" class="active">По цене</a></li>
-              <li><a href="#">По типу</a></li>
-              <li><a href="#">По функционалу</a></li>
+              <li>
+                <a href="#" class="active">По цене</a>
+              </li>
+              <li>
+                <a href="#">По типу</a>
+              </li>
+              <li>
+                <a href="#">По функционалу</a>
+              </li>
             </ul>
             <ul class="list-item sorting-arrows">
               <li>
-                <a class="descending active-arrows" href="#"><svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
-                <polygon fill="#231F20" points="5.5,0 0,10 11,10 "/>
-                </svg></a>
+                <a class="descending active-arrows" href="#">
+                  <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
+                  <polygon fill="#231F20" points="5.5,0 0,10 11,10 "/>
+                  </svg>
+                  <span class="visually-hidden">по возврастанию</span>
+                </a>
+                
               </li>
               <li>
-                <a class="ascending" href="#"><svg version="1.1" id="Layer_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <a class="ascending" href="#">
+                  <svg version="1.1" id="Layer_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
-                <polyline fill="#231F20" points="5.5,10 0,0 11,0 "/>
-                </svg></a>
+                  <polyline fill="#231F20" points="5.5,10 0,0 11,0 "/>
+                  </svg>
+                  <span class="visually-hidden">по возврастанию</span>
+                </a>
               </li>
             </ul>
           </section>
@@ -114,8 +129,12 @@
                   <div class="scale">
                     <div class="bar"></div>
                   </div>
-                  <div class="range-toggle range-toggle-min"></div>
-                  <div class="range-toggle range-toggle-max"></div>
+                  <div class="range-toggle range-toggle-min">
+                    <span class="visually-hidden">минимальная цена</span>
+                  </div>
+                  <div class="range-toggle range-toggle-max">
+                    <span class="visually-hidden">максимальная цена</span>
+                  </div>
                 </div>
                 <div class="price-slider">
                   <input type="number" name="min-price" value="0">
@@ -320,7 +339,8 @@
           </div>
           <div class="footer-navigation-product">
             <div class="footer-adres">
-              <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 +7 (812) 555-05-55</p>
+              <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+              <a href="tel:+78125550555">+7 (812) 555-05-55</a>
             </div>
             <ul class="list-item navigation-product-list">
               <li><a href="#">Материалы</a></li>
@@ -337,11 +357,25 @@
             <div class="footer-company-copyright">
               <p>&copy; 2010–2019 Компания «Техномарт»<br>Все права защищены</p>
             </div>
+
             <ul class="list-item social-list">
-              <li><a href="#" class="vkontakte"></a></li>
-              <li><a href="#" class="facebook"></a></li>
-              <li><a href="#" class="instagram"></a></li>
+              <li>
+                <a href="#" class="vkontakte">
+                  <span class="visually-hidden">вконтакте</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="facebook">
+                  <span class="visually-hidden">фейсбук</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="instagram">
+                  <span class="visually-hidden">инстаграмм</span>
+                </a>
+              </li>
             </ul>
+
             <div class="footer-copyright">
               <div>
                 <p>Обратная связь:
