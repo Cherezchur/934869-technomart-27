@@ -998,9 +998,9 @@ a {
     margin-left: 29px;
 
     font-size: 30px;
+    font-weight: 400;
     text-transform: uppercase;
     color:#32425c;
-    letter-spacing: -0.9px;
     line-height: 30px;
 }
 
@@ -1067,10 +1067,10 @@ a {
 
 .support-title h2 {
     font-size: 30px;
+    font-weight: 400;
     line-height: 30px;
     color: black;
     text-transform: uppercase;
-    letter-spacing: -1px;
 }
 
 .support-title p {
@@ -1183,10 +1183,10 @@ a {
     margin-top: -3px;
 
     font-size: 36px;
+    font-weight: 400;
     line-height: 36px;
     text-transform: uppercase;
     color: #32425c;
-    letter-spacing: -0.5px;
 }
 
 .service-sladers p {
@@ -1286,10 +1286,10 @@ a {
 
 .about-company-columns h2 {
     font-size: 30px;
+    font-weight: 400;
     line-height: 30px;
     color: black;
     text-transform: uppercase;
-    letter-spacing: -0.9px;
 
     margin: 0px;
     padding: 0px;
@@ -1429,10 +1429,10 @@ a {
 
 .catalog-title-section {
     font-size: 30px;
+    font-weight: 400;
     line-height: 30px;
     text-transform: uppercase;
     color:#32425c;
-    letter-spacing: -0.6px;
 
     padding-left: 28px;
     padding-top: 30px;
@@ -1721,19 +1721,19 @@ a {
 
 .brend-list,
 .power-group-list {
-    margin-top: 17px;
+    margin-top: 15px;
 }
 
 .brend-list li,
 .power-group li {
     position: relative;
-    padding-left: 33px;
+    padding-left: 17px;
     padding-bottom: 20px;
 }
 
 .brend-list input {
     position: relative;
-    display: none;
+    opacity: 0;
 }
 
 .brend-list input[type="checkbox"]:disabled ~ label::after,
@@ -1803,7 +1803,7 @@ a {
 
 .power-group-list input[type="radio"] {
     position: relative;
-    display: none;
+    opacity: 0;
 }
 
 .power-group-list input[type="radio"]:disabled ~ label::after,
@@ -2445,11 +2445,12 @@ a {
     display: none;
     position: fixed;
     top: 80px;
-    left: 27%;
+    left: 50%;
     z-index: 30;
 
     width: 620px;
     height: 275px;
+    margin-left: -320px;
     padding: 0;
 
     background-color: white;
@@ -2609,6 +2610,8 @@ a {
 .you-email input {
     width: 202px;
     height: 32px;
+
+    line-height: 18px;
 }
 
 .mail-text {
@@ -2623,6 +2626,8 @@ a {
     padding-top: 10px;
     width: 440px;
     height: 97px;
+
+    line-height: 18px;
 }
 
 .user-form .submit-button {
@@ -2696,6 +2701,8 @@ a {
     height: 38px;
     width: 220px;
     margin: 37px 0;
+
+    line-height: 18px;
 }
 
 .modal-buttons a {
