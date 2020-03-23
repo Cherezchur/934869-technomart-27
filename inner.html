@@ -29,6 +29,7 @@
                 </svg>
               </label>
             </form>
+            <span class="visually-hidden">Поиск</span>
           </li>
           <li>
             <a class="bookmark" href="#">Закладки: 0</a>
@@ -99,7 +100,9 @@
       <div class="container">
         <ul class="list-item breadcrumbs">
           <li>
-            <a class="home" href="index.html"></a>
+            <a class="home" href="index.html">
+              <span class="visually-hidden">Домой</span>
+            </a>
           </li>
           <li>
             <a class="breadcrumbs-item" href="#">Каталог</a>
@@ -148,7 +151,7 @@
                   width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
                   <polyline fill="#231F20" points="5.5,10 0,0 11,0 "/>
                   </svg>
-                  <span class="visually-hidden">по возврастанию</span>
+                  <span class="visually-hidden">по убыванию</span>
                 </a>
               </li>
             </ul>
@@ -174,7 +177,7 @@
                   </div>
                 </div>
                 <div class="price-slider">
-                  <input type="number" name="min-price" value="0">
+                  <input type="number" id="min-price" name="min-price" value="0">
                   <input type="number" name="max-price" value="30000">
                 </div>
               </fieldset>
